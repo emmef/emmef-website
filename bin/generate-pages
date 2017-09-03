@@ -1,0 +1,82 @@
+#!/bin/bash
+
+absolutePath() {
+# $1 is the relative or absolute path
+# $2 and further contain additional arguments to pwd
+  PATH_TO_USE=$1
+  shift
+  if [ "x$1" == "x--create" ]
+  then
+    ALLOW_CREATE="yes"
+    shift
+  else
+    ALLOW_CREATE=
+  fi
+  if [ ! -d "$PATH_TO_USE" ] 
+  then
+    if [ -n "$ALLOW_CREATE" ]
+    then
+      if ! mkdir -p "$PATH_TO_USE" >/dev/null
+      then
+        echo "Cannot create directory: $PATH_TO_USE" >&2
+        echo ""
+		return
+	  fi
+	fi
+  fi
+  if [ -d "$PATH_TO_USE" ] 
+  then
+  	if pushd "$PATH_TO_USE" 2>&1 >/dev/null
+	then
+		pwd $*
+		popd >/dev/null
+		return
+	fi
+  fi
+  echo ""  
+}
+
+INVOCATION_DIR=`dirname $0`
+SCRIPT_PATH=`absolutePath "$INVOCATION_DIR"`
+JAR_PATH="$SCRIPT_PATH/cms-core.jar"
+SOURCE_PATH=`absolutePath "$SCRIPT_PATH/../source"`
+TARGET_PATH=`absolutePath "$SCRIPT_PATH/../../public_html" --create`
+
+if [ -z "$SCRIPT_PATH" ] 
+then
+	echo "Cannot find where I am via invocation: $0" >&2
+	exit 1
+fi
+if [ ! -f "$JAR_PATH" ] 
+then
+	echo "Cannot find page generation JAR: $JAR_PATH" >&2
+	exit 1
+fi
+
+
+if [ -z "$SOURCE_PATH" ] 
+then
+	echo "Cannot find site source file directory: $SOURCE_PATH"
+	exit 1
+fi
+if [ -z "$TARGET_PATH" ] 
+then
+	echo "Cannot find site path: $TARGET_PATH"
+	exit 1
+fi
+if [ ! -d "$TARGET_PATH" ] 
+then
+	if ! mkdir -p "$TARGET_PATH"
+	then
+		echo "Cannot user or create site path: $SCRIPT_PATH/../public_html"
+		exit 1
+	fi
+fi
+
+echo "Generating site \"$TARGET_PATH\" from source \"$SOURCE_PATH\""
+
+java -jar "$JAR_PATH" --source-root "$SOURCE_PATH" --target "$TARGET_PATH" --copyright "Michel Fleur"
+
+
+
+
