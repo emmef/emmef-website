@@ -1,4 +1,6 @@
-
 # Backups
 *~
 *.backup
+
+# IDE files
+.idea/**
