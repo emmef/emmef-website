@@ -14,9 +14,37 @@ body {
 
 .reference-item { vertical-align: top;  }
 
-article { line-height: 1.3; } 
+article { line-height: 1.3; }
+div.latest-articles-item { padding: 0.4em; padding-bottom: 0; overflow: hidden; }
+div.latest-article-title { display: block; padding: 0 1em 0 0; margin: 0 0 0.4em 0; font-size: 120%; }
+div.latest-article-title a { font-size: inherit; font-weight: inherit; padding: inherit; margin: inherit;}
+div.latest-article-category { display: block; padding: 0 0 0 1em; margin:0; float:right; font-size:80%; font-weight: bold; color: rgba(0,0,0,0.5);}
+div.latest-article-summary { display: block; padding: 0.5em 0 0.8em 0; margin: 0 0 0.5em 0; }
+div.latest-article-date { display:none; position: relative; float:right; /*right: 0; bottom:0; */margin:0; padding: 0.4em 0.2em 0.2em 0.4em; font-size: 60%; }
+
+table { border: none; padding:0.2ex; spacing: 0; border-collapse: collapse; }
+
+table.colorbox { width:90%; margin: 1em 5% 1em 5%; }
+table.colorbox tbody tr td { margin: 0; }
+table.colorbox tbody tr td { border: 0.1ex solid black; padding: 0.2ex; text-align: center; vertical-align: middle;}
+
+table.colorbox tbody tr td.firstcolumn,
+table.colorbox tfoot tr td.firstcolumn { padding-top: 0.4ex; border: none; text-align: left; vertical-align: top; min-width: 5em; }
+
+table.colorbox tbody tr td.firstcolumn { text-align: left; }
+table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
 
 @media screen {
+    :root {
+        --main-bg-color: white;
+        --article-bg-color: #fffcf0;
+        --last-article-bg-color: #f4fcff;
+        --refs-bg-color: #f4fffd;
+
+        --max-last-article-summary-height: 6em;
+        --last-article-gradient-height: 2em;
+        --max-last-article-item-height: calc(--max-last-article-summary-height + --last-article-gradient-height);
+    }
 	body {
 		padding: 0;
 		margin: 0;
@@ -59,20 +87,20 @@ article { line-height: 1.3; }
     nav a { text-decoration: none; }
 
     article {  padding:0.5ex 0.5ex 0.3ex 0.5ex; margin:0; }
-    article a { font-weight: bold; }
-    article { background-color: #fffcf0; }
+    article a { text-decoration: underline;  }
+    article { background-color: var(--article-bg-color); }
     
-    a.reference-ptr { font-size: 82%; font-style:italic; font-weight: bold; }
-    a.reference-ptr::before { content: "\00a0["; }
+    a.reference-ptr { font-size: 70%; font-weight: bold; line-height: 80%; vertical-align: super; text-decoration: none;}
+    a.reference-ptr::before { content: "["; } /* \00a0 */
     a.reference-ptr::after { content: "]"; }
-	 article a { text-decoration: none; color: inherit; }
-	 a:hover { text-decoration: underline; }
+	article a { color: inherit; }
+	a:hover { text-decoration: underline; }
 
 	div.references {
         border: 0 solid #acb;
         border-top-width: 0.1ex;
         padding: 0.5em 0.5em 0.5em 0.5em;
-        background-color: #f4fffd;
+        background-color: var(--refs-bg-color);
 	}
     .reference-list {
         margin:0;
@@ -100,17 +128,26 @@ article { line-height: 1.3; }
     span.source-modification::before { content: '\270f\00a0' }
     span.source-copyright::before { content: ' '}
 
-    table { border: none; padding:0.2ex; spacing: 0; border-collapse: collapse; }
-
-    table.colorbox { width:90%; margin: 1em 5% 1em 5%; }
-    table.colorbox tbody tr td { margin: 0; }
-    table.colorbox tbody tr td { border: 0.1ex solid black; padding: 0.2ex; text-align: center; vertical-align: middle;}
-
-    table.colorbox tbody tr td.firstcolumn,
-    table.colorbox tfoot tr td.firstcolumn { padding-top: 0.4ex; border: none; text-align: left; vertical-align: top; min-width: 5em; }
-
-    table.colorbox tbody tr td.firstcolumn { text-align: left; }
-    table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
+    div.latest-articles-item {
+        min-height: 5em;
+        overflow: hidden;
+        position: relative;
+        background-color: var(--last-article-bg-color);
+        border: none;
+        border-bottom: 0.4em solid var(--article-bg-color);
+    }
+    div.latest-articles-item:before {
+        position:absolute;
+        content:'';
+        width:100%;
+        height:var(--last-article-gradient-height);
+        left:0;
+        bottom:0;
+        background:linear-gradient(transparent 0%, var(--last-article-bg-color));
+    }
+    div.latest-articles-item-first { max-height: 15em;}
+    div.latest-articles-item-subsequent { height: 7.5em;}
+    div.latest-article-title a { text-decoration: none; }
 }
 
 @media print {
