@@ -16,11 +16,12 @@ body {
 
 article { line-height: 1.3; }
 div.latest-articles-item { padding: 0.4em; padding-bottom: 0; overflow: hidden; }
-div.latest-article-title { display: block; padding: 0 1em 0 0; margin: 0 0 0.4em 0; font-size: 120%; }
+div.latest-article-title { display: block; padding: 0 1em 0 0; margin: 0 0 0.4em 0; font-weight: bold; }
 div.latest-article-title a { font-size: inherit; font-weight: inherit; padding: inherit; margin: inherit;}
-div.latest-article-category { display: block; padding: 0 0 0 1em; margin:0; float:right; font-size:80%; font-weight: bold; color: rgba(0,0,0,0.5);}
+div.latest-article-category, div.latest-article-date { display: block; padding: 0 0 0 1em; margin:0; float:right; color: rgba(0,0,0,0.5);}
+div.latest-article-category { font-size:80%; font-weight: bold; }
+div.latest-article-date { font-size:60%; }
 div.latest-article-summary { display: block; padding: 0.5em 0 0.8em 0; margin: 0 0 0.5em 0; }
-div.latest-article-date { display:none; position: relative; float:right; /*right: 0; bottom:0; */margin:0; padding: 0.4em 0.2em 0.2em 0.4em; font-size: 60%; }
 
 table { border: none; padding:0.2ex; spacing: 0; border-collapse: collapse; }
 
@@ -85,6 +86,7 @@ table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
     nav .siblings-separator-first::before { content: "|"}
     nav .siblings-separator-inner::before { content: "|"}
     nav a { text-decoration: none; }
+    a.latest-article-category { text-decoration: none; }
 
     article {  padding:0.5ex 0.5ex 0.3ex 0.5ex; margin:0; }
     article a { text-decoration: underline;  }
@@ -128,8 +130,9 @@ table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
     	color: #888; background:white; padding: 0.2ex; width: 100%; text-align: center;
     	border-width: 0.1ex 0 0 0; border-color:#acb; border-style: solid;  
     }
-    span.source-modification::before { content: '\270f\00a0' }
+    div.source-modification::before { content: '\270f\00a0' }
     span.source-copyright::before { content: ' '}
+    div.source-modification { display:inline; }
 
     div.latest-articles-item {
         min-height: 5em;
@@ -158,7 +161,7 @@ table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
 	* {
 		font-family: "Trebuchet", Verdana, sans-serif;
 	}
-	
+
 	a { text-decoration: none; color:inherit; }
 	div.references { 
 		border-width: 0.1ex 0 0 0; 
