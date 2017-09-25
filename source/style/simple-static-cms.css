@@ -40,10 +40,6 @@ table.colorbox tfoot tr td.firstcolumn { padding-top: 0.4ex; border: none; text-
 table.colorbox tbody tr td.firstcolumn { text-align: left; }
 table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
 
-var {
-    font-weight: lighter;
-}
-
 @media screen {
     :root {
         --main-bg-color: white;
