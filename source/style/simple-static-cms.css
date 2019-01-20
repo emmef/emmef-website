@@ -4,7 +4,7 @@
 section { break-inside: avoid; }
 
 * {
-	font-size: 12pt;
+	font-size: 10pt;
 }
 
 body {
@@ -27,6 +27,7 @@ div.latest-article-category, div.latest-article-date { display: block; padding: 
 div.latest-article-category { font-size:80%; font-weight: bold; }
 div.latest-article-date { font-size:60%; }
 div.latest-article-summary { display: block; padding: 0.5em 0 0.8em 0; margin: 0 0 0.5em 0; }
+#article-summary-title { display: none; visibility: hidden; }
 
 table { border: none; padding:0.2ex; spacing: 0; border-collapse: collapse; }
 
@@ -121,9 +122,10 @@ table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
     p, h1, h2, h3, h3, h5, h6 { margin-left: 0; margin-right: 0; }
     p, ul, ol { margin-bottom: 0.65em; }
     li { margin-bottom: 0.2955em; }
-    h1 { font-size: 133%; margin-bottom: 0.65em; }
+    h1 { font-size: 133%; margin-bottom: 0.25em; }
     h2 { font-size: 110%; margin-bottom: 0.1477em; font-weight:bolder; font-style:italic; }
-
+    dt { font-style: italic; font-weight: bolder; }
+    dd { margin-bottom: 0.35em; margin-top: 0.20em; }
     #article-summary {
         font-weight:bolder;
     }

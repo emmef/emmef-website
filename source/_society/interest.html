@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8"/>
-    <title>Interest</title>
+    <title>Bank interest</title>
     <meta name="scms-uuid" value="62f30eba-70c2-4253-8ebe-3502a3f049c7"/>
     <meta name="scms-parent-uuid" value="d487fa39-ab78-4b87-87a1-e3d64debbf7b"/>
     <meta name="scms-uses-math" value="false"/>
@@ -24,10 +24,9 @@
 <section>
     <h2>The money system</h2>
     <p>
-        The story is about the creation of money by lending the principal to an actor by another actor (the bank), the
+        The story is about the creation of money by lending the principal to an actor (debtor) by another actor (the bank), the
         destruction of money by repaying the principal and paying between actors that include interest payments. To
-        explain this behaviour, a <a href="page:42796614-4f45-49e3-aa37-cd5a81b2b2b8" chapter="7fedf684-abb0-4b48-891e-8ca7b1305c99">simple
-        money debt based money system without a central bank</a> is perfect. </p>
+        explain this behaviour, a simple money debt based money system without a central bank is perfect.</p>
 </section>
 
 <!--
@@ -108,7 +107,7 @@ progress (W.I.P.)
     <p>
         This is a free adaptation of the story on Positive Money<a
             href="ref:http://positivemoney.org/2017/02/interest/">Positive Money &ndash; is there enough money to pay
-        off all the interest?</a> that debunks the fact that it is mathematically impossible to pay back interest. </p>
+        off all the interest?</a> that debunks the fact that it is &ldquo;mathematically&rdquo; impossible to pay back interest (which is silly phrasing anyway).</p>
 </section>
 <p>
     Alice the entrepreneur wants to borrow 100 credits. George agrees and demands 10% interest. The 100 credits are
@@ -220,13 +219,16 @@ progress (W.I.P.)
 <section>
     <h2>What's wrong with this story?</h2>
     <p>Even though the story proves that it is not mathematically <em>impossible</em> to repay debt and the additional
-        interest: it is a rather contrived story: all inhabitants must make the right decisions at the right time.
-        Reality is messy, so this "model" of a society is too simplistic. Let's make it more interesting! </p>
+        interest: it is a rather contrived story: all inhabitants must make the right decisions at the right time. Let's call this scenario <var>A</var>
+    </p>
+    <p>
+        Let's assume that someone in this scenario decides to keep an amount <var>p</var> on his or her balance so that Alice cannot pay back the principal (in time). In a single scenario, the bank sees this and can write off loans. In reality, more and similar scenarios happen and overlap both in time and in actors. This makes it more difficult for the bank to see when to write off a loan. It also makes it easier for Alice in scenario <var>A</var> to pay back the principal with money from another scenario <var>B</var> that happens to overlap in time. That solves the "problem" <var>p</var> for scenario <var>A</var> but propagates it to scenario <var>B</var>. It can be shown that we cannot order all scenarios so that <var>p</var> is solved if it exists longer than the principal in <var>A</var> is due. A percentage of actors will make decisions that lead to problems. So per scenario or period of time, an extra amount of money needs to be borrowed into existence to "fix" these problems. This amount likely is roughly proportional to the total amount of money in circulation. Sounds awfully much like a positive feedback loop leading to exponential growth. But it takes a little longer to reach sch a conclusion than to assume "interest makes it mathematically impossible to pay back the loan".
+    </p>
 </section>
 <section>
     <h1 id="b52d8278-60ae-487a-9867-fb1ab59ea068">Scenario, where interest is added to bank's capital</h1>
     <p>
-        <strong>Work in Progress as of 2017-09-09</strong>
+        <strong>TBD</strong>
     </p>
 </section>
 
@@ -235,20 +237,20 @@ progress (W.I.P.)
     <ul>
         <li><strong>FACT1</strong>: The island has four inhabitants: George, Alice, Bob and Pete</li>
         <li><strong>FACT2</strong>: The island has one bank, worth 1000 credits and owned by George. The credits
-            actually were rare stones.
+            actually were rare gems.
         </li>
         <li><strong>FACT3</strong>: None of the inhabitants except George, have stones, though they can have other
-            property but that is not generally acceptable as payment.
+            property. That other property is not generally acceptable as payment, though.
         </li>
         <li><strong>FACT4</strong>: All the inhabitants, including George, have a balance at George's bank, that starts
             out empty. People used to carry around the original stones from George that made up the bank. Now, the
             balances are just numbers. But the stones might still be there!
         </li>
         <li><strong>RULE1</strong>: Nobody is legally bound to accept anything but balance payments. In other words:
-            number on balances are the only possible legal tender.
+            number on balances are the only possible legal tender!
         </li>
         <li><strong>RULE2</strong>: If asked, George can add a number to an inhabitant's (debtor's) balance that
-            represents the principal of a loan. A represents a debt that must be repaid in a limited amount of time. In
+            represents the principal of a loan. This represents a debt that must be repaid in a limited amount of time. In
             addition, the debtor will pay a negotiated percentage of interest per year over the amount of the principal
             that has not yet been repaid.
         </li>
