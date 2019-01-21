@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Textbook example</title>
+    <meta name="scms-uuid" value="3f99fddd-ffde-49e3-91f3-3f6ce732aec4"/>
+    <meta name="scms-parent-uuid" value="f7d4bb5b-08ed-44f7-a4c6-5415664874aa"/>
+    <meta name="scms-uses-math" value="true"/>
+</head>
+<body>
+<p>
+    This is how a bank works according to (too) many textbooks: it lends out money it gets from people that have savings at the bank. While not correct, it can explain some terminology and give a little insight. So here it is&nbsp;&hellip;
+</p>
+<p>
+    <strong>Old ; please update</strong>
+</p>
+
+<p>
+    For this explanation, the economy contains a fixed amount of money that does not change during the example. There is
+    only one bank that has two kinds of accounts: payment accounts without interest and savings accounts with interest.
+    This explanation does not describe reality, so reading it as if you have no previous knowledge of banking is
+    advisable. </p>
+<p>
+    In an ideal situation, all money circulates continuously between payment accounts: it is spent all the time. Some
+    people cannot spend all the money they get and the want to save that up. Some entrepreneurs temporarily need extra
+    money to make nice things happen. If savings would take money out of circulation that could be used by
+    entrepreneurs, that would be a waste! The savings account solves this problem, without the need for one on one
+    transactions between entrepreneurs and people with savings. </p>
+<p>
+    Let's take a look at the bank that has, for example, 4 creditors with savings accounts SA&nbsp;&hellip; SA&nbsp;4
+    and a total amount of savings \(T_s\) <a href="ref:note:SavingsOwnership"/>:</p>
+<section>
+    <table class="colorbox">
+        <tbody>
+        <tr>
+            <td colspan="2" width="20%">SA&nbsp;1</td>
+            <td colspan="3" width="30%">SA&nbsp;2</td>
+            <td colspan="1" width="10%">SA&nbsp;3</td>
+            <td colspan="4" width="40%">SA&nbsp;4</td>
+        </tr>
+        <tr>
+            <td colspan="10">\(T_s\)</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+<p>
+    The bank is allowed to lend out savings to debtors. Because lending out money involves a certain risk and there's
+    always a chance of creditors that take their money out of their savings account, the bank is legally obligated to
+    retain a certain percentage of the money that it manages. This is called the minimum buffer percentage, \(b\) that
+    needs to be larger than zero but lower than a hundred percent. The total amount of outstanding debt, \(T_d\) and the
+    buffer \(B\) can be pictured as follows:</p>
+<section>
+    <table class="colorbox">
+        <tbody>
+        <tr>
+            <td colspan="2" width="20%">SA&nbsp;1</td>
+            <td colspan="3" width="30%">SA&nbsp;2</td>
+            <td colspan="1" width="10%">SA&nbsp;3</td>
+            <td colspan="4" width="40%">SA&nbsp;4</td>
+        </tr>
+        <tr>
+            <td colspan="10">\(T_s\)</td>
+        </tr>
+        <tr>
+            <td colspan="8">\( T_d &lt; (1 - b)T_s\)</td>
+            <td colspan="2" width="20%">\(B &gt; bT_s\)</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+<section>
+    <h2>How does lending out work?</h2>
+    <p>
+        When the bank lends out money, it creates a contract that describes the amount of money and a schedule for both
+        repaying the money and paying the interest. Sometimes, additional conditions apply, such as surity. When this
+        contract is signed by bank and debtor, the bank moves money from the pool of savings to the payment account of
+        the debtor. The debtor can then move this money from the payment account to the payment account of someone else.
+        As long as the debtor meets the criteria in the debt-contract, everything works.
+</section>
+<p>
+    It is possible that a debtor cannot repay his debt or the interest that is due. This is the reason that there must
+    always be a buffer of money that is not lend out. In addition, interest income can also be added as extra
+    buffer. </p>
+<section>
+    <h2>Bank-run</h2>
+    <p>
+        Imagine that a large percentage of the money in savings accounts is pulled out by the owners of the accounts. If
+        the bank already has the maximum amount of money lend out, it needs to violate the law to give that money back.
+        Therefore, banks need an additional buffer on top of the minimum allowed by law. In addition, banks will also
+        offer accounts that need people to keep the savings for at least a fixed a mount of time, so that risk is
+        reduced. </p>
+</section>
+<section>
+    <h2>Multiplying money</h2>
+    <p>
+        As said the debtor is free to use the loan as desired, apart from the schedule of repayment and paying debt and
+        additional criteria in the debt-contract. The debtor could be payed in full to a landlord. This landlord could
+        then transfer the money from his payment to his savings account. In turn, this means that the bank is allowed to
+        lend out more money. Which could, again, end up on a savings account. And so on. With a required buffer percentage \(b\) this leads to a maximum perceived amount of money in circulation of \( \frac{1}{b}-1 \) <a
+            href="ref:note:MoneyGrowth"/>.</p>
+</section>
+<aside id="SavingsOwnership">
+    Here, only savings are mentioned, hence \(T_s\), while equity <a href="ref:note:Equity"/> should also count towards
+    this number. This is irrelevant to <em>this</em> story and was therefore omitted.
+</aside>
+<aside id="Equity">
+    Equity: The money that would be left to pay to the owners of the bank if it would sell all its possessions and pay
+    off its liabilities first. As the owners of the bank are not modelled in this textbook example, consider the people
+    with savings as the owners of the bank, which is not that far from reality.
+</aside>
+<aside id="MoneyGrowth">
+    <p>Imagine a buffer percentage of \(b\) and an original amount of savings \(T_{s}\). A buffer percentage of \(b\)
+        means that we can rent out a percentage \(a\), where \(a = 1 - b\). The maximum money given to debtors can now
+        be \(T_d = aT_s\). If all this money goes to savings accounts, we can lend out more money: \(T_d = a (a T_s) =
+        a^2 T_s\). If all <em>that</em> money goes to savings accounts, we can <em>again</em> lend out more money: \(T_d
+        = a ( a^2 T_s) = a^3 T_s\). If we repeat this endlessly, we get:</p>
+    $$ T_d = T_s \sum\limits_{i=1}^\infty {a^i} $$
+    <p>Yielding</p>
+    $$ T_d = - T_s + T_s \sum\limits_{i=0}^\infty {a^i} = (-1 + \sum\limits_{i=0}^\infty {a^i})T_s = (-1 + \frac{1}{1 - a})T_s$$
+    <p>substituting \(a = 1 - b \), this gives</p>
+    $$ T_d = ( \frac{1}{b} - 1 )T_s$$
+</aside>
+</body>
+</html>
