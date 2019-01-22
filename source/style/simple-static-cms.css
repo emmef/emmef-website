@@ -31,15 +31,18 @@ div.latest-article-summary { display: block; padding: 0.5em 0 0.8em 0; margin: 0
 
 table { border: none; padding:0.2ex; spacing: 0; border-collapse: collapse; }
 
-table.colorbox { width:90%; margin: 1em 5% 1em 5%; }
+table.colorbox { /* width:90%; */ margin: 1em 5% 1em 5%; }
 table.colorbox tbody tr td { margin: 0; }
-table.colorbox tbody tr td { border: 0.1ex solid black; padding: 0.2ex; text-align: center; vertical-align: middle;}
+table.colorbox tbody tr td,th { padding: 0.2ex 0.5ex 0.2ex 0.5ex; text-align: center; vertical-align: middle;}
+table.colorbox tbody tr td { border: 0.1ex solid black; }
 
 table.colorbox tbody tr td.firstcolumn,
 table.colorbox tfoot tr td.firstcolumn { padding-top: 0.4ex; border: none; text-align: left; vertical-align: top; min-width: 5em; }
 
 table.colorbox tbody tr td.firstcolumn { text-align: left; }
 table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
+figcaption { text-align: center; font-style: italic; }
+figure { margin: 0.25em 0.5em 0.25em 0.5em; padding: 0.25em 0.5em 0.25em 0.5em; border: 1px solid rgba(0,0,0,0.25); }
 
 @media screen {
     :root {
@@ -85,7 +88,7 @@ table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
 
     nav .siblings-element { color:#666; }
     nav .siblings-separator { color:#666; }
-    nav .siblings-separator-first::before { content: "|"}
+    nav .siblings-separator-first::before { content: "||"}
     nav .siblings-separator-inner::before { content: "|"}
     nav a { text-decoration: none; }
     a.latest-article-category { text-decoration: none; }
