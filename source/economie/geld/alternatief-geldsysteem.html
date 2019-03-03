@@ -705,6 +705,13 @@
 <p>
     Het is mogelijk om het stallen van <em>teveel</em> geld op een depositobank of op een betaalrekening, te ontmoedigen. Bijvoorbeeld door boven een bepaald bedrag per persoon of per FTE voor een bedrijf, een progressieve rente te heffen. Deze kan eventueel in hetzelfde potje komen als de rente op de doorlopende kredieten van banken.
 </p>
+<h1>TODO:</h1>
+<ul>
+    <li>Voorbeeldbalans deposito bank</li>
+    <li>Voorbeeld balansen voor te use-case waar primaire bank niet direct doorlopend krediet kan opheffen (potjes met rente, dynamische ontwikkeling rente op overige kredieten)</li>
+    <li>Uitleggen wat primaire bank met rente op doorlopend krediet doet</li>
+</ul>
+
 <h1 id="8c562a4c-6e5d-4d99-b032-46d0c08e0d66">Vergelijkingen en kenmerken</h1>
 <h2 id="0b5ae039-bffe-4aa7-84f7-230e87210ca5">Faillissement</h2>
 <p>
@@ -777,7 +784,7 @@
     Stel dat de bank niet levensvatbaar meer is. Het is op dat moment moeilijk om &ldquo;snel even geld uit de bank te trekken&rdquo;, vanwege de maximum hevel: een bank die te weinig bezittingen heeft, kan geen geld overmaken naar rekeningen van anderen, inclusief andere banken. Als gevolg is het dan niet mogelijk om nieuwe leningen te verstrekken of spaargeld terug te storten naar de tegenrekening van de spaarder. Effectief heeft de primaire bank het eerste recht om het doorlopend krediet op te eisen. Dat is ook nodig omdat er anders geld in circulatie blijft dat niet terugkomt. Nadat de primaire bank het doorlopend krediet heeft opgeheven, is het wat haar betreft afgewikkeld. Verder zullen de schuldeisers van de bank X eisen dat de bank alle middelen gebruikt om de openstaande schulden zoveel mogelijk af te lossen.
 </p>
 <p>
-    Zelfs wanneer bank X <em>niet</em> in staat was om het doorlopend krediet af te lossen, dan zijn de rente inkomsten van de andere banken geschikt om de zaak af te wikkelen. De primaire bank kan die opgespaard hebben maar kan ook gewoon wachten tot er genoeg is verzameld.
+    Zelfs wanneer bank X <em>niet</em> in staat was om het doorlopend krediet af te lossen, dan zijn de rente inkomsten van de andere banken geschikt om de zaak af te wikkelen. De primaire bank kan die opgespaard hebben maar kan ook gewoon wachten tot er genoeg is verzameld. Met de verzamelde rente of de rentestroom kan het doorlopende krediet afgelost worden.
 </p>
 
 <figure>
@@ -839,7 +846,10 @@
     </table>
 </figure>
 <p>
-    De primaire bank heeft bij het afwikkelen van dit proces nooit een probleem. In het geschetste voorbeeld heeft ze immers succesvol het doorlopend krediet opgeheven en het totaal aan saldo's klopt nog steeds met de totale hoeveelheid krediet aan private banken. Ook werknemer W kan gewoon boodschappen doen en rekeningen betalen. De kosten liggen nu bij de andere banken, die het risico hebben genomen om bank X te financieren. Bank X had ook 110 kunnen aantrekken van spaarder S:
+    De primaire bank heeft bij het afwikkelen van dit proces nooit een probleem. In het geschetste voorbeeld heeft ze immers succesvol het doorlopend krediet opgeheven en het totaal aan saldo's klopt nog steeds met de totale hoeveelheid krediet aan private banken. Ook werknemer W kan gewoon boodschappen doen en rekeningen betalen. De kosten liggen nu bij de andere banken, die het risico hebben genomen om bank X te financieren.
+</p>
+<p>
+    Het risico ligt nu bij de andere banken die geld hebben uitgeleend aan Bank X. Echter, bank X had ook 110 aan spaargeld kunnen aantrekken van spaarder S:
 </p>
 <figure>
     <figcaption>Figuur 12: De balans nadat bank X heeft geleend van spaarder S (in plaats van een andere bank), waarna bedrijf Y en bank X failliet gaan</figcaption>
@@ -907,7 +917,7 @@
         </tbody>
         <tfoot>
         <tr><td colspan="5">
-            <sup>*</sup> Spaarder S kan natuurlijk nooit geld gespaard hebben dat niet eerst door een andere bank is uitgeleend. De andere banken moeten op een eerder moment reeds geld in omloop hebben gebracht, dat dan uiteindelijk via spaarder S bij bank X en uiteindelijk bedrijf S terecht is gekomen.
+            <sup>*</sup> Spaarder S kan natuurlijk nooit geld gespaard hebben dat niet eerst door een andere bank is uitgeleend. De andere banken moeten op een eerder moment reeds geld in omloop hebben gebracht, dat dan uiteindelijk via spaarder S bij bank X en uiteindelijk bedrijf Y terecht is gekomen.
         </td></tr>
         </tfoot>
     </table>
@@ -915,10 +925,6 @@
 <p>
     In de beschreven scenario's zijn de risiconemers steeds de klos: in het eerste geval de overige banken en in het tweede geval spaarder S. Voor de primaire bank is het in ieder geval een zaak tussen de partijen onderling geworden. Bovendien heeft de primaire bank altijd nog een potje rente die aangewend kan worden om de pijn te verzachten. Dat zal ze als het goed is niet doen, omdat dit de kosten op iedereen zou afwenden en niet alleen op de partijen die risico namen.
 </p>
-<p><strong>TODO:</strong></p>
-<ul>
-    <li>Voorbeeld balansen voor te use-case waar primaire bank niet direct doorlopend krediet kan opheffen (potjes met rente, dynamische ontwikkeling rente op overige kredieten)</li>
-</ul>
 
 <h2 id="ee9fca80-1fe7-4e5a-b4e1-0312fde14d28">De risiconemer betaalt</h2>
 <p>
@@ -935,15 +941,17 @@
     In het bovenstaande, simpele voorbeeld, lijkt het alsof werknemer W het hele geldsysteem kan frustreren. Zou het toegestaan moeten worden dat mensen geld op een betaalrekening laten staan? De balans <em>an sich</em> lijkt aan te geven dat er een gevaar is voor geld dat op publieke rekeningen staat. De banken hebben dan een tekort op hun geaggregeerde balans. Die bestaat echter niet, want banken zijn in het alternatieve systemen gescheiden bedrijven die "toevallig" een uitleenvergunning hebben.
 </p>
 <p>
-    Voor <em>the sake of argument</em>, stel dat de geaggregeerde balans van de banken een probleem heeft. Een balans is een grove versimpeling van de werkelijkheid. Ten eerste beschrijven balansen noodzakelijkerwijs een micro-economisch systeem. De macro economie past niet op een balans die voor de gemiddelde mensen leesbaar is. Ten tweede, negeert de balans tijd. Zelfs als de geaggregeerde som van alle werknemer-saldo's constant zou zijn, vindt er in werkelijkheid een continue stroom van geld plaats. Het geld dat W uitgeeft, zal elders een principaal aflossen of de rente betalen. Daarnaast vinden er tegelijkertijd nog miljoenen andere transacties en scenario's plaats. De kans is bijna 100% en waarschijnlijk niet kleiner dan in het huidige systeem, dat het probleem vanzelf wordt opgelost. Deze oplossing leidt wel tot dezelfde geldgroei als in het huidige systeem.<a href="ref:note:money_as_debt_friction_problem"/> Verder is het altijd mogelijk om een deel van het geld publiek en zonder schuld in omloop te brengen, zodat het stallen op betaalrekeningen geen probleem is. Een deel van de rente op de doorlopende kredieten kan bijvoorbeeld gebruikt worden als &ldquo;volksdividend&rdquo;, rechtstreeks geïnvesteerd worden in nuts-projecten of om de kosten van het betaalsysteem te dekken. Dit is echter, nogmaals, een politieke keuze.
+    Voor <em>the sake of argument</em>, stel dat de geaggregeerde balans van de banken een probleem heeft. Een balans is een grove versimpeling van de werkelijkheid. Ten eerste beschrijven balansen noodzakelijkerwijs een micro-economisch systeem. De macro economie past niet op een balans die voor de gemiddelde mensen leesbaar is. Ten tweede, negeert de balans tijd. Zelfs als de geaggregeerde som van alle werknemer-saldo's constant zou zijn, vindt er in werkelijkheid een continue stroom van geld plaats. Het geld dat W uitgeeft, zal elders een principaal aflossen of de rente betalen. Daarnaast vinden er tegelijkertijd nog miljoenen andere transacties en scenario's plaats. De kans is bijna 100% en waarschijnlijk niet kleiner dan in het huidige systeem, dat het probleem vanzelf wordt opgelost. Deze oplossing leidt wel tot dezelfde geldgroei als in het huidige systeem.<a href="ref:note:money_as_debt_friction_problem"/>
+</p>
+<p>
+    Verder is het altijd mogelijk om een deel van het geld publiek en zonder schuld in omloop te brengen, zodat het stallen op betaalrekeningen geen probleem is. Een deel van de rente op de doorlopende kredieten kan bijvoorbeeld gebruikt worden als &ldquo;volksdividend&rdquo;, rechtstreeks geïnvesteerd worden in nuts-projecten of om de kosten van het betaalsysteem te dekken. Dit zijn echter politieke keuzes die <em>eventueel</em> aan het systeem kunnen worden toegevoegd.
 </p>
 <h2 id="89827f38-5288-43ef-b114-4160ca797831">Schijnvoordelen van het huidige systeem</h2>
-<h3>De geaggregeerde balans van banken</h3>
 <p>
     Als voordeel van het huidige geldsysteem wordt vaak genoemd dat alle betaalrekeningen zich ook op de geaggregeerde balans van de private banken bevinden. De geaggregeerde balans van alle private banken is dan altijd in evenwicht en er is dus ook een mathematische zekerheid dat een bank die tekort heeft, geld van een andere bank kan lenen. Ook hier geldt dat dit een te eenvoudige voorstelling van zaken is.
 </p>
 <p>
-    Als de mathematische zekerheid op de geaggregeerde balans in werkelijkheid geldt, zou de bankensector nooit in de problemen kunnen komen. Dat is, zacht gezegd, in strijd met de werkelijkheid. Vaak spelen vooronderstellingen hierbij een rol. Die vooronderstellingen zijn vaak niet eens bewust. De eerste veronderstelling is dat alle betrokken partijen direct en op het zelfde moment over alle informatie beschikken. De tweede veronderstelling is dat het systeem met een statische balans kan worden beschreven, zonder rekening te houden met de dynamiek in werkelijkheid. De derde veronderstelling is dat de betrokken partijen de rekencapaciteit hebben, rekencapaciteit om op tijd de ideale oplossing te formuleren van een immens, dynamisch probleem op basis van de meest rationele keuzes. De vierde veronderstelling is die rationaliteit.<a href="ref:note:macro_micro_macro_synthesis"/> De praktijk leert partijen ook gestuurd worden door intuïtie en emoties als &ldquo;vertrouwen&rdquo; en dat ze <em>niet</em> altijd aan elkaar uitlenen.
+    Als de mathematische zekerheid op de geaggregeerde balans in werkelijkheid geldt, zou de bankensector nooit in de problemen kunnen komen. Dat is, zacht gezegd, in strijd met de werkelijkheid. Vaak spelen vooronderstellingen hierbij een rol. Die vooronderstellingen zijn vaak niet eens bewust. De eerste veronderstelling is dat alle betrokken partijen direct en op het zelfde moment over alle informatie beschikken. De tweede veronderstelling is dat het systeem met een statische balans kan worden beschreven, zonder rekening te houden met de dynamiek in werkelijkheid. De derde veronderstelling is dat de betrokken partijen de rekencapaciteit hebben, rekencapaciteit om op tijd de ideale oplossing te formuleren van een immens, dynamisch probleem op basis van de meest rationele keuzes. De vierde veronderstelling is die rationaliteit.<a href="ref:note:macro_micro_macro_synthesis"/> Als deze vooronderstellingen in werkelijkheid gelden, dan en slechts dan is de balans een bruikbaar en voldoende model. De praktijk leert partijen ook gestuurd worden door intuïtie en emoties als &ldquo;vertrouwen&rdquo; en dat ze <em>niet</em> altijd aan elkaar uitlenen.
 </p>
 <p>
     Een partij die weigert uit te lenen als dat nodig zou zijn, is balanstechnisch gelijk aan werknemer W die weigert bank X te redden, ook al heeft hij daarvoor genoeg saldo op zijn rekening. En soms lenen partijen teveel uit. Het voordeel van alles op de geaggregeerde balans is een schijnvoordeel.
