@@ -52,17 +52,6 @@ class EmmefUtil {
             window.setTimeout(replaceDataThread, 10000);
         }
         replaceDataThread();
-        if (window.location && window.location.href && window.location.href.startsWith("file:")) {
-            let replaceFunction = function() {
-                window.location.reload();
-                window.setTimeout(
-                    replaceFunction, 10000
-                )
-            };
-            window.setTimeout(
-                replaceFunction, 10000
-            )
-        }
     }
 
     static replaceDates() {
