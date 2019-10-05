@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+newestFileStamp() {
+  local maxStamp
+  maxStamp=$(find . -exec stat -c%Y "{}" \; | sort | tail -n 1)
+  printf "%012d" "$maxStamp"
+}
+
+previousStamp=0
+
+while echo "Scanning..." >/dev/null
+do
+  stamp=$(newestFileStamp)
+  if [ "$stamp" -gt "$previousStamp" ]
+  then
+    bin/generate-pages
+    previousStamp="$stamp"
+  fi
+  sleep 2
+done
