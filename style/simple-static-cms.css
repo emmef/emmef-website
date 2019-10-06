@@ -20,7 +20,9 @@ sup, sub {
     line-height: 1;
 }
 
-div.latest-articles-item { padding: 0.4em; padding-bottom: 0; overflow: hidden; }
+div.latest-articles-item {
+    padding: 0.4em 0.4em 0;
+    overflow: hidden; }
 div.latest-article-title { display: block; padding: 0 1em 0 0; margin: 0 0 0.4em 0; font-weight: bold; }
 div.latest-article-title a { font-size: inherit; font-weight: inherit; padding: inherit; margin: inherit;}
 div.latest-article-category, div.latest-article-date { display: block; padding: 0 0 0 1em; margin:0; float:right; color: rgba(0,0,0,0.5);}
@@ -29,7 +31,7 @@ div.latest-article-date { font-size:60%; }
 div.latest-article-summary { display: block; padding: 0.5em 0 0.8em 0; margin: 0 0 0.5em 0; }
 #article-summary-title { display: none; visibility: hidden; }
 
-table { border: none; padding:0.2ex; spacing: 0; border-collapse: collapse; }
+table { border: none; padding:0.2ex; border-collapse: collapse; }
 
 table.colorbox { width:90%; margin: 1em 5% 1em 5%; }
 table.colorbox tbody tr td { margin: 0; }
