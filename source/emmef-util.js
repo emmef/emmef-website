@@ -45,8 +45,12 @@ TimeUnit.getDisplayAgeFromMilliSeconds = function(num,smallestUnit=TimeUnit.MINU
 }
 
 class EmmefUtil {
+    static youtubeFrames = undefined;
+    static articles = undefined;
+    static relativeEmbeddedFrameMargin = 0.1;
 
     static init() {
+        EmmefUtil.resizeEmbeddedFrames();
         let replaceDataThread = function() {
             EmmefUtil.replaceDates();
             window.setTimeout(replaceDataThread, 10000);
@@ -80,8 +84,45 @@ class EmmefUtil {
 
         return number != null ? Date.now() - number : null;
     }
+
+    static resizeEmbeddedFrames() {
+        let articles = document.body.getElementsByTagName("article");
+        let youtubeFrames = document.body.getElementsByClassName("youtube-frame");
+        try {
+            if (articles && youtubeFrames && articles.length > 0 && youtubeFrames.length > 0) {
+                EmmefUtil.articles = articles;
+                EmmefUtil.youtubeFrames = youtubeFrames;
+                let relativeMargin = getComputedStyle(document.body).getPropertyValue("--embedded-frame-margin");
+                if (relativeMargin && !isNaN(parseFloat(relativeMargin))) {
+                    EmmefUtil.relativeEmbeddedFrameMargin = Math.min(0.2, Math.max(0.01, parseFloat(relativeMargin)));
+                }
+                else {
+                    EmmefUtil.relativeEmbeddedFrameMargin = 0.1;
+                }
+                console.info(relativeMargin);
+                EmmefUtil.resizeYoutubeFrames();
+                window.addEventListener("resize", function () {EmmefUtil.resizeYoutubeFrames();});
+            }
+        }
+        catch (e) {
+            console.error("Could not establish if there are elements to resize", e.toString());
+        }
+    }
+
+    static resizeYoutubeFrames() {
+        if (EmmefUtil.articles && EmmefUtil.youtubeFrames) {
+            let articleWidth = 0;
+            for (let article of EmmefUtil.articles) {
+                articleWidth = Math.max(articleWidth, article.offsetWidth);
+            }
+            let margin = EmmefUtil.relativeEmbeddedFrameMargin * articleWidth;
+            let frameWidth = articleWidth - 2 * margin;
+            let frameHeight = 429 * frameWidth / 763;
+            for (let frame of EmmefUtil.youtubeFrames) {
+                frame.style.width = "" + frameWidth + "px";
+                frame.style.height = "" + frameHeight + "px";
+                frame.style.marginLeft = "" + margin + "px";
+            }
+        }
+    }
 }
-
-// EmmefUtil = new EmmefUtilClass();
-
-

@@ -10,6 +10,7 @@ section { break-inside: avoid; }
 body {
 	min-width: 10em;
 	max-width: 50em;
+    --embedded-frame-margin: 0.05;
 }
 
 .reference-item { vertical-align: top;  }
@@ -174,6 +175,13 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     div.latest-articles-item-first { max-height: 15em;}
     div.latest-articles-item-subsequent { height: 7.5em;}
     div.latest-article-title a { text-decoration: none; }
+
+    .youtube-frame {
+        width: 8em;
+        height: 5em;
+        border: 0;
+        margin: 0 0 0 1em;
+    }
 }
 
 @media print {
@@ -203,4 +211,9 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 			text-align: center;
 			font-style: italic;
 	}
+
+    .youtube-frame {
+        visibility: hidden;
+        display: none;
+    }
 }
