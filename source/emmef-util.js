@@ -11,13 +11,13 @@ class TimeUnit {
 
 
 TimeUnit.MILLISECONDS = new TimeUnit("msec", 1);
-TimeUnit.SECOND = TimeUnit.MILLISECONDS.times("s", 1000);
-TimeUnit.MINUTE = TimeUnit.SECOND.times("m", 60);
-TimeUnit.HOUR = TimeUnit.MINUTE.times("h", 60);
+TimeUnit.SECOND = TimeUnit.MILLISECONDS.times("S", 1000);
+TimeUnit.MINUTE = TimeUnit.SECOND.times("M", 60);
+TimeUnit.HOUR = TimeUnit.MINUTE.times("H", 60);
 TimeUnit.DAY = TimeUnit.HOUR.times("d", 24);
 TimeUnit.WEEK = TimeUnit.DAY.times("w", 7);
 TimeUnit.MONTH = TimeUnit.DAY.times("m", 30.438);
-TimeUnit.YEAR = TimeUnit.DAY.times("y", 365.254);
+TimeUnit.YEAR = TimeUnit.DAY.times("Y", 365.254);
 TimeUnit.UNITS = [ TimeUnit.YEAR, TimeUnit.MONTH, TimeUnit.WEEK, TimeUnit.DAY, TimeUnit.HOUR, TimeUnit.MINUTE, TimeUnit.SECOND];
 
 TimeUnit.getDisplayAgeFromMilliSeconds = function(num,smallestUnit=TimeUnit.MINUTE) {
