@@ -1,88 +1,126 @@
-class TimeUnit {
-    constructor(name, units) {
-        this.name = name;
-        this.units = units;
+const DateDisplayType = {
+    ISO : "ISO",
+    MIXED : "MIXED",
+    VAR : "format.dateDisplayType",
+};
+
+class DocumentDate {
+    static getDateDisplayType() {
+        let storedValue = window.localStorage.getItem(DateDisplayType.VAR);
+        switch (storedValue) {
+            case DateDisplayType.MIXED:
+                return DateDisplayType.MIXED;
+            default:
+                return DateDisplayType.ISO;
+        }
     }
 
-    times(name, units) {
-        return new TimeUnit(name, Math.round(this.units * units));
+    static nextDateDisplayType(displayType) {
+        switch (displayType) {
+            case DateDisplayType.ISO:
+                return DateDisplayType.MIXED;
+            default:
+                return DateDisplayType.ISO;
+        }
     }
-}
 
+    static toggleDateDisplayType() {
+        const storedType = DocumentDate.getDateDisplayType();
+        const nextType = DocumentDate.nextDateDisplayType(storedType);
+        window.localStorage.setItem(DateDisplayType.VAR, nextType);
 
-TimeUnit.MILLISECONDS = new TimeUnit("msec", 1);
-TimeUnit.SECOND = TimeUnit.MILLISECONDS.times("S", 1000);
-TimeUnit.MINUTE = TimeUnit.SECOND.times("M", 60);
-TimeUnit.HOUR = TimeUnit.MINUTE.times("H", 60);
-TimeUnit.DAY = TimeUnit.HOUR.times("d", 24);
-TimeUnit.WEEK = TimeUnit.DAY.times("w", 7);
-TimeUnit.MONTH = TimeUnit.DAY.times("m", 30.438);
-TimeUnit.YEAR = TimeUnit.DAY.times("Y", 365.254);
-TimeUnit.UNITS = [ TimeUnit.YEAR, TimeUnit.MONTH, TimeUnit.WEEK, TimeUnit.DAY, TimeUnit.HOUR, TimeUnit.MINUTE, TimeUnit.SECOND];
+        return nextType;
+    }
 
-TimeUnit.getDisplayAgeFromMilliSeconds = function(num,smallestUnit=TimeUnit.MINUTE) {
-    let rounded = Math.round(num);
-    let smallestUnitIndex = TimeUnit.UNITS.indexOf(smallestUnit);
-    let length = smallestUnitIndex >= 0 ? smallestUnitIndex + 1: TimeUnit.UNITS.length;
-    for (let i = 0; i < length; i++) {
-        let unit = TimeUnit.UNITS[i];
-        if (unit.units <= rounded) {
-            let numerator = Math.floor(rounded / unit.units);
-            let result = "" + numerator + unit.name;
-            if (i < length - 1) {
-                let remainder = rounded % unit.units;
-                let subUnit = TimeUnit.UNITS[i + 1];
-                let denominator = Math.floor(remainder / subUnit.units);
-                if (denominator < 1) {
-                    return result;
-                }
-                return result + denominator + subUnit.name;
+    static toggleDateDisplayTypeAndReplace() {
+        DocumentDate.toggleDateDisplayType();
+        DocumentDate.replaceDates();
+    }
+
+    static getDisplayAgeFromMilliSeconds(now, date) {
+        let result = date.toISOString();
+        if (DocumentDate.getDateDisplayType() === DateDisplayType.ISO) {
+            return result.replace(/:[0-9]{2}\.[0-9]{3}Z$/,"");
+        }
+        let year = date.getFullYear();
+        let yearDiff = now.getFullYear() - year;
+        let month = date.getMonth();
+        let monthDiff = now.getMonth() - month;
+        let day = date.getDay();
+        let dayDiff = now.getDay() - day;
+
+        if (yearDiff === 0 && monthDiff === 0 && dayDiff === 0) {
+            let minutes = Math.round((now.getTime() - date.getTime()) / 60000);
+            let hours = minutes / 600;
+            minutes -= 60 * hours;
+            result = "";
+            if (hours > 0) {
+                result += hours;
+                result += 'h';
             }
+            result += minutes;
+            result += "m";
             return result;
         }
-    }
-    return "0" + TimeUnit.UNITS[length - 1].name;
-}
 
-class EmmefUtil {
-    static youtubeFrames = undefined;
-    static articles = undefined;
-    static relativeEmbeddedFrameMargin = 0.1;
-
-    static init() {
-        EmmefUtil.resizeEmbeddedFrames();
-        let replaceDataThread = function() {
-            EmmefUtil.replaceDates();
-            window.setTimeout(replaceDataThread, 10000);
+        result = result.replace(/:[0-9]{2}\.[0-9]{3}Z$/,"");
+        if (yearDiff === 0) {
+            result = result.replace(/^[0-9]{4}-/, "");
         }
-        replaceDataThread();
+        if (yearDiff > 0 || monthDiff > 0) {
+            result = result.replace(/T[0-9]{2}:[0-9]{2}$/,"");
+        }
+
+        return result;
+    }
+
+
+
+    static getElementDate(element) {
+        if (typeof(element.emmefStamp) === "number") {
+            return new Date(element.emmefStamp);
+        }
+        let stampText = element.innerText;
+        let stamp = 1 * stampText;
+        let stampText2 = "" + stamp;
+        let number = stampText !== stampText2 ? null : stamp;
+        if (number !== null) {
+            element.emmefStamp = stamp;
+            return new Date(number);
+        }
+        return null;
     }
 
     static replaceDates() {
         let list = document.body.getElementsByClassName("milliseconds-age");
-
+        const now = new Date();
         for (let element of list) {
-            let seconds = EmmefUtil.getAgeInSeconds(element);
-            if (seconds != null) {
-                let display = TimeUnit.getDisplayAgeFromMilliSeconds(seconds)
-                element.innerHTML = display;
+            let date = DocumentDate.getElementDate(element);
+            if (date !== null) {
+                element.innerHTML = DocumentDate.getDisplayAgeFromMilliSeconds(now, date);
             }
         }
     }
+}
 
-    static getAgeInSeconds(element) {
-        let number = 0;
-        if (typeof(element.emmefStamp) == "number") {
-            number = element.emmefStamp;
-        }
-        else {
-            let stampText = element.innerText;
-            let stamp = 1 * stampText;
-            number = stamp != stampText ? null : stamp;
-            element.emmefStamp = number;
-        }
+class EmmefUtil {
+    constructor() {
+        this.youtubeFrames = undefined;
+        this.articles = undefined;
+        this.relativeEmbeddedFrameMargin = 0.1;
+    }
 
-        return number != null ? Date.now() - number : null;
+    static init() {
+        EmmefUtil.resizeEmbeddedFrames();
+        for (let element of document.getElementsByClassName("milliseconds-age")) {
+            element.addEventListener("click", DocumentDate.toggleDateDisplayTypeAndReplace);
+            window.console.log("Du Ya");
+        }
+        let replaceDataThread = function() {
+            DocumentDate.replaceDates();
+            window.setTimeout(replaceDataThread, 10000);
+        };
+        replaceDataThread();
     }
 
     static resizeEmbeddedFrames() {
@@ -90,22 +128,22 @@ class EmmefUtil {
         let youtubeFrames = document.body.getElementsByClassName("youtube-frame");
         try {
             if (articles && youtubeFrames && articles.length > 0 && youtubeFrames.length > 0) {
-                EmmefUtil.articles = articles;
-                EmmefUtil.youtubeFrames = youtubeFrames;
+                this.articles = articles;
+                this.youtubeFrames = youtubeFrames;
                 let relativeMargin = getComputedStyle(document.body).getPropertyValue("--embedded-frame-margin");
                 if (relativeMargin && !isNaN(parseFloat(relativeMargin))) {
-                    EmmefUtil.relativeEmbeddedFrameMargin = Math.min(0.2, Math.max(0.01, parseFloat(relativeMargin)));
+                    this.relativeEmbeddedFrameMargin = Math.min(0.2, Math.max(0.01, parseFloat(relativeMargin)));
                 }
                 else {
-                    EmmefUtil.relativeEmbeddedFrameMargin = 0.1;
+                    this.relativeEmbeddedFrameMargin = 0.1;
                 }
-                console.info(relativeMargin);
-                EmmefUtil.resizeYoutubeFrames();
-                window.addEventListener("resize", function () {EmmefUtil.resizeYoutubeFrames();});
+                window.console.info(relativeMargin);
+                this.resizeYoutubeFrames();
+                window.addEventListener("resize", function () {this.resizeYoutubeFrames();});
             }
         }
         catch (e) {
-            console.error("Could not establish if there are elements to resize", e.toString());
+            window.console.error("Could not establish if there are elements to resize", e.toString());
         }
     }
 
