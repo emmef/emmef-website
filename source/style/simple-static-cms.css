@@ -26,7 +26,7 @@ div.latest-articles-item {
     overflow: hidden; }
 div.latest-article-title { display: block; padding: 0 1em 0 0; margin: 0 0 0.4em 0; font-weight: bold; }
 div.latest-article-title a { font-size: inherit; font-weight: inherit; padding: inherit; margin: inherit;}
-div.latest-article-category, div.latest-article-date { display: block; padding: 0 0 0 1em; margin:0; float:right; color: rgba(0,0,0,0.5);}
+div.latest-article-category, div.latest-article-date { display: block; padding: 0 0 0 1em; margin:0; float:right; color: var(--alt-fg-30);}
 div.latest-article-category { font-size:80%; font-weight: bold; }
 div.latest-article-date { font-size:60%; }
 div.latest-article-summary { display: block; padding: 0.5em 0 0.8em 0; margin: 0 0 0.5em 0; }
@@ -37,14 +37,13 @@ table { border: none; padding:0.2ex; border-collapse: collapse; }
 table.colorbox { /* width:90%; */ margin: 1em 5% 1em 5%; }
 table.colorbox tbody tr td { margin: 0; }
 table.colorbox tbody tr td,th { padding: 0.2ex 0.5ex 0.2ex 0.5ex; text-align: center; }
-table.colorbox tbody tr td { border: 0.1ex solid black; vertical-align: top; }
 table.colorbox tbody tr th { vertical-align: bottom; }
+table.colorbox tbody tr td { vertical-align: top; }
 
 table.colorbox tbody tr td.firstcolumn,
-
 table.colorbox tbody tr td.firstcolumn { text-align: left; }
 figcaption { text-align: center; font-style: italic; }
-figure { margin: 0.25em 0.5em 0.25em 0.5em; padding: 0.25em 0.5em 0.25em 0.5em; border: 1px solid rgba(0,0,0,0.25); }
+figure { margin: 0.25em 0.5em 0.25em 0.5em; padding: 0.25em 0.5em 0.25em 0.5em; border-width: 1px; border-style: solid }
 
 table.colorbox tbody tr td.money { text-align: right; }
 table.colorbox tbody tr td.description { text-align: left; }
@@ -58,10 +57,67 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 
 @media screen {
     :root {
-        --main-bg-color: white;
-        --article-bg-color: #fffcf0;
-        --last-article-bg-color: #f4fcff;
-        --refs-bg-color: #f4fffd;
+        --flip-bg-fg: 0;
+
+        --base-bg-red: 255;
+        --base-bg-green: 255;
+        --base-bg-blue: 255;
+
+        --base-fg-red: 0;
+        --base-fg-green: 0;
+        --base-fg-blue: 0;
+
+        /**
+        Contrast is between 1, maximal, 0: no contrast and -1: reverse maximal.
+         */
+        --contrast: 1;
+        --xx-cf: calc(0.5 + 0.5 * var(--contrast));
+        --xx-1mcf: calc(1 - var(--xx-cf));
+
+        --bg-red:   calc(var(--base-bg-red) * var(--xx-cf) + var(--base-fg-red) * var(--xx-1mcf));
+        --bg-green:   calc(var(--base-bg-green) * var(--xx-cf) + var(--base-fg-green) * var(--xx-1mcf));
+        --bg-blue:   calc(var(--base-bg-blue) * var(--xx-cf) + var(--base-fg-blue) * var(--xx-1mcf));
+
+        --fg-red:   calc(var(--base-bg-red) * var(--xx-1mcf) + var(--base-fg-red) * var(--xx-cf));
+        --fg-green:   calc(var(--base-bg-green) * var(--xx-1mcf) + var(--base-fg-green) * var(--xx-cf));
+        --fg-blue:   calc(var(--base-bg-blue) * var(--xx-1mcf) + var(--base-fg-blue) * var(--xx-cf));
+
+        --background-color: rgb(
+                calc(var(--bg-red)),
+                calc(var(--bg-green)),
+                calc(var(--bg-blue)));
+
+        --foreground-color: rgb(
+                calc(var(--fg-red)),
+                calc(var(--fg-green)),
+                calc(var(--fg-blue)));
+
+        --alt-bg-10: rgb(
+                calc(0.9 * var(--bg-red) + 0.1 * var(--fg-red)),
+                calc(0.9 * var(--bg-green) + 0.1 * var(--fg-green)),
+                calc(0.9 * var(--bg-blue) + 0.1 * var(--fg-blue)));
+        --alt-bg-20: rgb(
+                calc(0.8 * var(--bg-red) + 0.2 * var(--fg-red)),
+                calc(0.8 * var(--bg-green) + 0.2 * var(--fg-green)),
+                calc(0.8 * var(--bg-blue) + 0.2 * var(--fg-blue)));
+        --alt-fg-10: rgb(
+                calc(0.1 * var(--bg-red) + 0.9 * var(--fg-red)),
+                calc(0.1 * var(--bg-green) + 0.9 * var(--fg-green)),
+                calc(0.1 * var(--bg-blue) + 0.9 * var(--fg-blue)));
+        --alt-fg-20: rgb(
+                calc(0.2 * var(--bg-red) + 0.8 * var(--fg-red)),
+                calc(0.2 * var(--bg-green) + 0.8 * var(--fg-green)),
+                calc(0.2 * var(--bg-blue) + 0.8 * var(--fg-blue)));
+        --alt-fg-30: rgb(
+                calc(0.3 * var(--bg-red) + 0.7 * var(--fg-red)),
+                calc(0.3 * var(--bg-green) + 0.7 * var(--fg-green)),
+                calc(0.3 * var(--bg-blue) + 0.7 * var(--fg-blue)));
+        --base-text-color: var(--foreground-color);
+        --main-bg-color: var(--background-color);
+
+        --article-bg-color: var(--background-color);
+        --latest-article-bg-color: var(--alt-bg-10);
+        --refs-bg-color: var(--alt-bg-10);
 
         --max-last-article-summary-height: 6em;
         --last-article-gradient-height: 2em;
@@ -70,7 +126,8 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 	body {
 		padding: 0;
 		margin: 0;
-		background-color: white;
+		background-color: var(--background-color);
+        color: var(--foreground-color);
 		min-height: 10em;
 	}
 
@@ -78,36 +135,43 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 		font-family: 'Open Sans', calibri, verdana, sans-serif;
 	}
 
-	#article-title { visibility: hidden; display: none; }
+    table.colorbox tbody tr td { border: 0.1ex solid var(--alt-fg-30); vertical-align: top; }
+    figure { border-color: var(--alt-bg-20); }
 
-    nav { border-width: 0 0 0.1ex 0; border-color: #acb; border-style: solid; margin:0;}
+    #article-title { visibility: hidden; display: none; }
+
+    nav { border: none; }
     nav { padding: 0.2ex 0.5ex 0.2ex 0.5ex; }
 
-    nav .permalink-enabled { color: #333; }
-    nav .permalink-disabled { color: #bbb; }
+    nav .permalink-enabled { color: var(--alt-fg-10); }
+    nav .permalink-disabled { color: var(--alt-fg-30); }
 
     nav .element { padding: 0.5ex; }
 
-    nav .parents-element { color: #666; }
-    nav .parents-separator-inner::before { content: "/"}
+    nav .parents-element { color: var(--alt-fg-20); }
+    nav .parents-separator-inner::after { content: "/"}
+    nav .parents-separator-last::after { content: "/"}
 
-    nav .current-element-self { color: black; font-weight: bolder; font-size:120%; }
+    nav .current-element-self { color: var(--foreground-color); font-weight: bolder; font-size:120%; }
 
-    nav .children-element { font-size:80%; color:black; font-weight: bold; }
-    nav .children-separator { color: #666; }
-    nav .children-separator-first::before { content: "|"}
+    nav .children-element { font-size:80%; color:var(--foreground-color); /*font-weight: bolder; */}
+    nav .children-separator { color: var(--alt-fg-10); }
+    nav .children-separator-first::before { content: "/"}
     nav .children-separator-inner::before { content: "|"}
 
-    nav .siblings-element { color:#666; }
-    nav .siblings-separator { color:#666; }
-    nav .siblings-separator-first::before { content: "||"}
+    nav .siblings-element { color:var(--alt-fg-20); }
+    nav .siblings-separator { color:var(--alt-fg-20); }
+    nav .siblings-separator-first::before { content: "//"}
     nav .siblings-separator-inner::before { content: "|"}
+    nav .contrast-setter { color: var(--alt-fg-30); }
+    nav .contrast-setter:hover { color: var(--foreground-color); cursor: pointer; }
+
     nav a { text-decoration: none; }
     a.latest-article-category { text-decoration: none; }
 
     article {  padding:0.5ex 0.5ex 0.3ex 0.5ex; margin:0; }
     article a { text-decoration: underline;  }
-    article { background-color: var(--article-bg-color); }
+    article { background-image: linear-gradient(var(--alt-bg-20) 0, var(--article-bg-color) 0.7em) }
     
     a.reference-ptr { font-size: 70%; font-weight: bold; line-height: 80%; vertical-align: super; text-decoration: none;}
     a.reference-ptr::before { content: "["; } /* \00a0 */
@@ -116,10 +180,11 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 	a:hover { text-decoration: underline; }
 
 	div.references {
-        border: 0 solid #acb;
-        border-top-width: 0.1ex;
+        border: none;
         padding: 0.5em 0.5em 0.5em 0.5em;
-        background-color: var(--refs-bg-color);
+        background-color: var(--background-color);
+        background-image: linear-gradient(var(--refs-bg-color) 0%, var(--background-color) 0.6em );
+        background-position: top;
 	}
     .reference-list {
         margin:0;
@@ -127,7 +192,8 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     }
     footer { padding:0; margin: 0; }
 
-    .reference-item { vertical-align: top;  } 
+    .reference-item { vertical-align: top;  }
+    .reference-item a { color: inherit; }
     td.reference-item-content { padding: 0 0 0.5em 0; }
 
     .reference-item-number { font-size:80%; text-align: left; padding-right:1em; }
@@ -150,8 +216,8 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     }
 
     div.file-data { 
-    	color: #888; background:white; padding: 0.2ex; width: 100%; text-align: center;
-    	border-width: 0.1ex 0 0 0; border-color:#acb; border-style: solid;  
+    	color: var(--alt-fg-30); background:var(--background-color); padding: 0.2ex; width: 100%; text-align: center;
+    	border-width: 0.1ex 0 0 0; border-color:var(--alt-bg-20); border-style: solid;
     }
     div.source-modification::before { content: '\270f\00a0' }
     span.source-copyright::before { content: ' '}
@@ -161,7 +227,7 @@ td.marker-green { background: rgba(0,255,0,0.1); }
         min-height: 5em;
         overflow: hidden;
         position: relative;
-        background-color: var(--last-article-bg-color);
+        background-image: linear-gradient(var(--latest-article-bg-color) 0%, var(--background-color) 0.6em);
         border: none;
         border-bottom: 0.4em solid var(--article-bg-color);
     }
@@ -172,7 +238,7 @@ td.marker-green { background: rgba(0,255,0,0.1); }
         height:var(--last-article-gradient-height);
         left:0;
         bottom:0;
-        background:linear-gradient(transparent 0%, var(--last-article-bg-color));
+        background:linear-gradient(transparent 0%, var(--background-color));
     }
     div.latest-articles-item-first { max-height: 15em;}
     div.latest-articles-item-subsequent { height: 7.5em;}
@@ -203,7 +269,9 @@ td.marker-green { background: rgba(0,255,0,0.1); }
    .reference-item-number { font-size:70%; text-align: left; padding-right:1em; }
    a.reference-ptr { font-size: 70%; font-style:italic; font-weight: bold; vertical-align:super; }
    a.reference-ptr::before { content: "\00a0"; }
-		
+   table.colorbox tbody tr td { border: 0.1ex solid black; vertical-align: top; }
+   figure { border-color: rgba(0,0,0,0.25); }
+
 	#article-title { width: 100%; text-align: center; font-style:italic; padding-bottom: 1em; }
 	nav * { visibility: hidden; }
 	

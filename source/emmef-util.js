@@ -64,7 +64,7 @@ class DocumentDate {
         }
 
         result = result.replace(/:[0-9]{2}\.[0-9]{3}Z$/,"");
-        if (yearDiff === 0) {
+        if (yearDiff === 0 || (yearDiff === 1 && monthDiff < 0)) {
             result = result.replace(/^[0-9]{4}-/, "");
         }
         if (yearDiff > 0 || monthDiff > 0) {
@@ -103,6 +103,8 @@ class DocumentDate {
     }
 }
 
+const CONTRASTS = [1, 0.8, 0.6, 0.4, -0.4, -0.6, -0.8, -1.0, ];
+
 class EmmefUtil {
     constructor() {
         this.youtubeFrames = undefined;
@@ -114,13 +116,35 @@ class EmmefUtil {
         EmmefUtil.resizeEmbeddedFrames();
         for (let element of document.getElementsByClassName("milliseconds-age")) {
             element.addEventListener("click", DocumentDate.toggleDateDisplayTypeAndReplace);
-            window.console.log("Du Ya");
         }
         let replaceDataThread = function() {
             DocumentDate.replaceDates();
             window.setTimeout(replaceDataThread, 10000);
         };
         replaceDataThread();
+    }
+
+    static getStoredContrastIdx() {
+        let contrastText = window.localStorage.getItem("color.contrast");
+        let contrast = 1.0 * contrastText;
+        return Math.max(0, Math.min(contrast, CONTRASTS.length - 1));
+    }
+
+    static applyStoredContrast() {
+        let idx = EmmefUtil.getStoredContrastIdx();
+        let contrast = Math.min(Math.max(CONTRASTS[idx], -1), 1);
+        window.console.log("Contrast: "+ contrast);
+        document.documentElement.style.setProperty("--contrast", "" + contrast);
+    }
+
+    static contrast() {
+        let idx = EmmefUtil.getStoredContrastIdx();
+        let newIdx = idx + 1;
+        if (newIdx >= CONTRASTS.length) {
+            newIdx = 0;
+        }
+        window.localStorage.setItem("color.contrast", newIdx.toString());
+        EmmefUtil.applyStoredContrast();
     }
 
     static resizeEmbeddedFrames() {
@@ -164,3 +188,6 @@ class EmmefUtil {
         }
     }
 }
+
+EmmefUtil.applyStoredContrast();
+
