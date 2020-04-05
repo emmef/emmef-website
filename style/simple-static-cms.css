@@ -46,10 +46,9 @@ table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
 @media screen {
     :root {
         --main-bg-color: white;
-        --article-bg-color: #fffcf0;
-        --last-article-bg-color: #f4fcff;
+        --article-bg-color: #dfdfdf;
+        --latest-article-bg-color: #f4fcff;
         --refs-bg-color: #f4fffd;
-
         --max-last-article-summary-height: 6em;
         --last-article-gradient-height: 2em;
         --max-last-article-item-height: calc(--max-last-article-summary-height + --last-article-gradient-height);
@@ -148,7 +147,7 @@ table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
         min-height: 5em;
         overflow: hidden;
         position: relative;
-        background-color: var(--last-article-bg-color);
+        background-color: var(--latest-article-bg-color);
         border: none;
         border-bottom: 0.4em solid var(--article-bg-color);
     }
@@ -159,7 +158,7 @@ table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
         height:var(--last-article-gradient-height);
         left:0;
         bottom:0;
-        background:linear-gradient(transparent 0%, var(--last-article-bg-color));
+        background:linear-gradient(transparent 0%, var(--latest-article-bg-color));
     }
     div.latest-articles-item-first { max-height: 15em;}
     div.latest-articles-item-subsequent { height: 7.5em;}
