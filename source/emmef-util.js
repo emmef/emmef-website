@@ -51,7 +51,7 @@ class DocumentDate {
 
         if (yearDiff === 0 && monthDiff === 0 && dayDiff === 0) {
             let minutes = Math.round((now.getTime() - date.getTime()) / 60000);
-            let hours = minutes / 600;
+            let hours = Math.floor(minutes / 60);
             minutes -= 60 * hours;
             result = "";
             if (hours > 0) {
