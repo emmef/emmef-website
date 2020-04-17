@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>Causality</title>
+    <title>DCQE</title>
     <meta name="scms-uuid" value="03d87f47-a0d2-478a-bbe6-deb6dc2974e7"/>
     <meta name="scms-parent-uuid" value="acf9990c-4885-48a8-9147-e4462aec5a2e"/>
     <meta name="scms-uses-math" value="true"/>
 </head>
 <body>
 <section>
-    <h1 id="article-summary-title">Causality</h1>
+    <h1 id="article-summary-title">Does the delayed choice quantum eraser violate causality?</h1>
     <p id="article-summary">
-        Relativity states that causality travels with the speed of light.<a href="ref:https://en.wikipedia.org/wiki/Light_cone">Light cones explained on Wikipedia</a>. Experiments like the delayed choice quantum eraser (DCQE) confirm that sometimes, causality happens instantaneously.<a
-            href="ref:https://en.wikipedia.org/wiki/Delayed-choice_quantum_eraser"
-            target="wikipedia_delayed_choice_quantum_eraser">Delayed-choice quantum eraser on Wikipedia</a>
-        If the first measurement in the DCQE is interpreted as an event in the observers world line that <em>affects</em> the second measurement, we indeed observe a violation of causality.<a href="ref:https://en.wikipedia.org/wiki/World_line">World line on wikipedia</a> From the perspective of the entangled photon pair (EPP) however, a causal ordering of events cannot be established: all events share the same spacetime interval.<a href="ref:note:dcqe-with-mass"/> All events &ndash; emission and two measurements &ndash; constitute the EPP's complete life and happen simultaneously in terms of causality. With this interpretation, there is no violation of causality at all.
+        Relativity states that causality travels with the speed of light.<a href="ref:https://en.wikipedia.org/wiki/Light_cone">Light cones explained on Wikipedia</a>. The Delayed Choice Quantum Eraser experiment, <dfn>DCQE</dfn>, confirms that a measurement can affect another instantaneously or even retroactively.<a
+            href="ref:note:dcqe"/>
+        When measurements are considered events in the observers world line, a violation of causality is indeed observed.<a href="ref:https://en.wikipedia.org/wiki/World_line">World line on wikipedia</a> However, when the measurements are considered from the perspective of the entangled photons pair's light-like world-lines, no causal distinction can be made between the events: emission and two measurements. The reason is that all events on a light-like world line share the same spacetime interval.<a href="ref:note:dcqe-with-mass"/> In that case, the effect of one measurement on another, <em>retroactive according to the observer with mass</em>, is not necessarily a violation of causality.
     </p>
 </section>
 
@@ -25,20 +24,7 @@
 
 <h1>Introduction</h1>
 <p>
-    The argument cannot be expressed without basic knowledge of (special) relativity and quantum mechanics
-</p>
-
-<h2>A little relativity</h2>
-<p>
-    There are far better introductions to relativity than I can give, so please check these out.<a href="ref:note:intros_to_relativity"/>. It is assumed that special relativity (of flat spacetime) is enough. One reason is that the experiments that confirm the immediate influence, take place in flat  spacetime. First because it adds complexity to add curvature to the setup of the experiment and second because it is almost impossible to cause it under laboratory conditions. However, if the flat spacetime assumption cannot be made, I am interested in why not.
-</p>
-<p>
-    According to relativity the speed of causality, \(c\), is limited and equal to the speed of light in a vacuum. In addition, things without mass must move with \(c\), while things with mass can only move slower than \(c\).<a href="ref:note:mass_speed_space"/> If event <var>A</var> causes or affects event <var>B</var>, there is a causal relation in the order \(A \implies B\). Note, that this not necessarily the same as <var>A</var> <em>comes before</em> <var>B</var>, as time is subjective. This is both fundamental and annoying. An observer <var>O</var> can only hope to affect events that occur within its "causality-bubble". With proper observer time starting at \(t=0\), this is a sphere with the observer at its center and a radius \(r=ct\), agreed on by all observers.<a href="ref:note:folding_space"/>
-</p>
-
-<h2>A little quantum mechanics</h2>
-<p>
-    From the quantum mechanical side, it is enough to know that measuring a "particle" &ndash; or more accurate: <em>interacting</em> with it &ndash; will cause the wave function that describes it, to <em>collapse</em>. Quantum mechanics makes it very clear that this collapse happens <em>instantaneously</em>. The collapse of the wave function leaves the observer with some information about the particle, depending on the interaction (measurement). The type and accuracy of information that is revealed always excludes another type of information or its accuracy. This is both fundamental and annoying. As entangled particles are described by a single wave function, the collapse as a result of measuring one particle, unfortunately also affects the other particle, immediately. In double slit experiments,<a href="ref:https://en.wikipedia.org/wiki/Double-slit_experiment" target="wikipedia_double_slit">Double-slit experiment on Wikipedia</a> measuring the <em>which-way</em> information of a subject, erases its <em>wave-like</em> information. In other words: &ldquo; as soon as it is know through which slit the particle went, the interference pattern disappears. This is exploited in the delayed-choice quantum eraser: <em>DCQE</em>.<a href="ref:https://en.wikipedia.org/wiki/Delayed-choice_quantum_eraser" target="wikipedia_delayed_choice_quantum_eraser">Delayed-choice quantum eraser on Wikipedia</a>.
+    The argument cannot be expressed without some basic knowledge of (special) relativity and quantum mechanics. There are far better introductions to theory than I can give.<a href="ref:note:intros_to_relativity"/><a href="ref:https://en.wikipedia.org/wiki/Double-slit_experiment" target="wikipedia_double_slit">Double-slit experiment on Wikipedia</a><a href="ref:note:dcqe"/>
 </p>
 
 <h1>The experiment</h1>
@@ -46,26 +32,33 @@
     The DCQE uses photons: I do not know if versions of the experiment exist that use other mass-less particles or even particles <em>with</em> mass. If these exists, this will have consequences for the argument. However, it might also help to surface deeper implications, see &ldquo;<a href="page:4bebfdd6-e7af-4f8e-ae1d-8da03d18c7fd"/>&rdquo;. Here, the experiment is described and the argument is made using photons.
 </p>
 <p>
-    The DCQE lets photons travel through a double slit first. This is followed by a crystal that transforms a photon in two entangled photons. The first entangled photon travels to a measurement device \(D_1\) that is capable of measuring two things: <em>which-way</em> information or nothing. In addition, \(D_1\) can decide on the measurement <em>after</em> the entangled photon emerges from the crystal. The second measurement device \(D_2\) is placed in a location that the second photon can only reach <em>after</em> the first measurement is already completed and is guaranteed to be outside of the causality bubble that forms at the measurement by \(D_1\).<a href="ref:note:measurement_completed"/>. \(D_2\) measures if an interference pattern occurs. It turns out that there is a perfect correspondence between \(D_1\) measuring <em>which-way</em> information and \(D_2\) <em>not</em> measuring an interference pattern.
+    The DCQE lets a photon travel through a double slit first. This is followed by a crystal that transforms a photon in two entangled photons, emitted in two specific directions. This setup behaves like <em>two</em> double-slit experiments and we would see similar interference patterns if we would setup screens in both directions. The first entangled photon \(p_1\) travels to a measurement device \(D_1\) that is indeed just a detector that might show an interference pattern. The second entangled photon \(p_2\) travels to another measurement device \(D_2\) that is positioned much further away, so that the \(p_2\) only reaches it <em>after</em> \(p_1\) hits \(D_1\). \(D_2\) is capable of measuring the arrival of a photon and can enable or disable measurement of <em>which-way</em> information: through which slit did the photon travel?
 </p>
 <p>
-    Let the measurements by devices \(\{D_1,D_2\}\) correspond to measurement events \(\{M_1,M_2\}\). There is a causality bubble that forms at \(M_1\) and that all observers agree on. It can be shown that all observers agree that this bubble does not contain \(D_2\) at the time of \(M_2\). For example, let the photons move in opposite directions place \(M_2\) twice as far from the splitting crystal as \(M_1\). All observers will agree that the bubble only reached two-thirds of the distance between \(D_1\) and \(D_2\) at the time of \(M_2\). All observers must therefore agree that \(M_1\) can never affect \(M_2\).
+    It turns out that there is a perfect correspondence between \(D_2\) measuring <em>which-way</em> information and \(D_1\) <em>not</em> showing an interference pattern and the other way round.
 </p>
-<h1>Is relativistic causality falsified?</h1>
+<h1>Is causality falsified?</h1>
 <p>
-    At a first glance, it is definitely falsified. As in order for \(M_1\) to affect \(M_2\), information must be passed from \(M_1\) to \(M_2\) and that cannot travel faster that \(c\). But there is something weird going on.
-</p>
-<p>
-    Photons have no mass and thus move with the speed of causality: \(c\). That means that all observers, including the photon, agree that the spacetime interval is constant for the complete world line of the photon. That also means that all <em>events</em> on the world line of a photon, have the exact same interval. Let \(E\) be the emission "event" of a photon and \(M\) is destruction event by doing a measurement. As explained earlier, the causal ordering of events is based on the spacetime interval between those events. If that interval is zero, it is unclear whether \(E\) (could have) caused \(M\) or the other way round. If furthermore the photon "sees" no time difference and no space difference, it is unclear whether \(E\) and \(M\) are actually different events. We could for all purposes define "the life of a photon" by an event \(P \equiv E \equiv M\) that transfers a fixed amount of energy between two points in spacetime, without experiencing any difference between these &ldquo;points&rdquo; An observer (that has mass) <em>does</em> experience time and can conclude that the photon is created and, depending on whether an interaction occurs, lives on or gets destroyed <em>later</em>. In some cases, the observer is even able to affect the photons journey or measure (and kill) it.<a href="ref:note:knowing_whether_a_photon_exists"/>
+    Let the measurements by devices \(\{D_1,D_2\}\) correspond to measurement events \(\{E_{m1},E_{m2}\}\) and the emission of both entangled photons by the crystal to event \(E_e\). All observers agree on the speed of light and the fact that \(E_e\) preceded \(E_{m1}\) and \(E_{m2}\) plus that \(E_{m1}\) happened before \(E_{m2}\). All observers must therefore agree that \(E_{m2}\) can never affect \(E_{m1}\). Yet, doing a different measurement with \(D_2\) corresponds perfectly with seeing or not seeing an interference pattern, a pattern or blot that was created <em>before</em> \(E_{m2}\).
 </p>
 <p>
-    So there is this photon in timeless limbo and the time-bound observer. When the observer measures the photon in some way, it ceases to exists in exchange for <em>some</em> of its information. According to the observer, this looks a lot like a spooky probability function that is "stretched out" over the complete eventual path of the photon that is also determined by what or who decides to interact with it. This path might stretch over billions of years and kilometers or just the lab: for the photon it's all the same. For the observer the probability of being somewhere travels with \c\). Remember, however, that if the observer does not measure the photon, there is only a likelihood that the photon is where observer thinks it is at that time: the actual path is only established at interaction: measurement, death.<a href="ref:note:knowing_whether_a_photon_exists"/> This behaviour looks a lot like the behavior of a wave function of a system, measured by an observer. The relativistic perspective just makes it more eerie. Depending on the type or interpretation of quantum mechanics (I need to study this), mass-less particles do or do not have a wave function. To avoid confusion, the eerie photon behavior is described here by the spooky function of mass-less particles.
+    Is causality falsified? As in order for \(E_{m2}\) to affect \(E_{m1}\), information must be passed from \(E_{m2}\) to \(E_{m1}\) and that cannot travel faster that \(c\). But there is something weird going on.
 </p>
 <p>
-    No consider the DCQE experiment. If we add entanglement to the mix, the question is whether the  spooky-function stretches out across <em>both</em> entangled photons in the experiment, like the wave function of entangled particles. If the pair of photons \(\{p',p''\}\) is considered, there are emission events and measurement events: \(\{E',E'',M',M''\}\). As the emission event is the same event for both photons, \(E' \equiv E''\), and each emission event is also its measurement event \(M' \equiv \M''), al that happens to <em>both photons</em> boils down a <em>a single event</em> \(P\). In that case, the used interpretation of relativity dictates that $$M_1 \equiv P \land M_2 \equiv P \implies M_1 \equiv M_2.$$ Forget about time differences or causality bubbles perceived by the observer: causality is not violated, as both measurements are necessarily the same event.
+    Relativity states that the causal ordering of events is based on the spacetime interval between those events. Photons have no mass and <em>must</em> move with the speed of causality, better known as the speed of light. All events on the world lines of photons have the same interval. That means the interval <em>between</em> these events is zero. As a result, no causal ordering between these events can be established. This is illustrated by the fact that photons experience no time, nor distance: their complete life from creation to destruction happens immediately. Now the interpretation I'd like to propose is as follows.
 </p>
-
+<h3 id="3a034580-2776-474f-b593-e1e5fd74fa46">Proposal: light like event equivalence</h3>
+<p>
+    Light like event equivalence means that events on a single world line that are not causally separated, are part of the same event. Assume that the life of photon \(p_1\) consists of its emission and measurement events \(E_e\) and\(E_{m1}\). Because of the light-like world line, these events are not causally separated. Therefore, the life of \(p_1\) consists of a single event \(T_1 \equiv \{E_e,E_{m1}\}\): a transfer of energy between two points in spacetime. This energy transfer is instantaneous from the photon perspective - though it has not time to realise that. But and observer with mass is burdened by time and space. There might be billions of years between the creation and the detection of a photon. And the observer has the option to do nothing, to affect the path of the photon or to kill it by measurement.<a href="ref:note:knowing_whether_a_photon_exists"/> Whatever the observer decides: the photon immediately knows how it dies as soon as it gets created.
+</p>
+<h3>Does the delayed choice quantum eraser violate causality?</h3>
+<p>
+    Because the photons in the quantum eraser share the same emission event, we can also define \(T \equiv \{E_e,E_{m1},E_{m2}\}\): the transfer of two equal portions of energy from one point in spacetime to two other points in spacetime. Both measurements are necessarily part of the same event. They cannot be distinguished an so they <em>must</em> affect each other. Causality is not violated. And causality is the only thing all observers agree upon. The poor observer with mass has to accept that not only quantum mechanics is weird or contra intuitive&hellip;
+</p>
 <h1 id="4bebfdd6-e7af-4f8e-ae1d-8da03d18c7fd">Wave functions and light-like world lines</h1>
+<p>
+    So there is this photon in timeless, spaceless limbo and the time and space-bound observer. When the observer measures the photon in some way, it ceases to exists in exchange for <em>some</em> of its information.  According to the observer, this looks a lot like a spooky probability function that is "stretched out" over the complete eventual path of the photon. A path that is also determined by what interacts with it. This path might stretch over billions of years and kilometers or just the lab: for the photon it's all the same. If the observer <em>does not</em> measure the photon, there is only a likelihood that the photon is where observer thinks it is at that time: the actual path is only established at interaction: measurement.<a href="ref:note:knowing_whether_a_photon_exists"/> Again: this behaviour looks a lot like the spooky behavior of a wave function of a quantum system.
+</p>
 <p>
     <em>Disclaimer: this is really speculative and a large conceptual step</em>. In lack of better wording: <em>what if some of the events that can happen to a wave function, also have zero spacetime interval?</em> It could be interesting to see how we can combine zero-interval interpretation with quantum mechanics. It would be necessary to express the spacetime interval in the in terms of the function's mathematical space or the other way round. This is above my competence, but might open some interesting areas of research!
 </p>
@@ -87,6 +80,9 @@
 </aside>
 <aside id="dcqe-with-mass">
     As far as I know, there have not been delayed choice quantum erasers that use non-photon entangled pairs.
+</aside>
+<aside id="dcqe">
+    <a href="https://en.wikipedia.org/wiki/Delayed-choice_quantum_eraser"  target="wikipedia_delayed_choice_quantum_eraser">Delayed-choice quantum eraser on Wikipedia</a>
 </aside>
 </body>
 </html>
