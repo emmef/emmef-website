@@ -30,7 +30,7 @@ div.latest-article-category, div.latest-article-date { display: block; padding: 
 div.latest-article-category { font-size:80%; font-weight: bold; }
 div.latest-article-date { font-size:60%; }
 div.latest-article-summary { display: block; padding: 0.5em 0 0.8em 0; margin: 0 0 0.5em 0; }
-#article-summary-title { display: none; visibility: hidden; }
+/*#article-summary-title { display: none; visibility: hidden; }*/
 
 table { border: none; padding:0.2ex; border-collapse: collapse; }
 
@@ -169,7 +169,7 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     nav a { text-decoration: none; }
     a.latest-article-category { text-decoration: none; }
 
-    article {  padding:0.5ex 0.5ex 0.3ex 0.5ex; margin:0; }
+    article {  padding:0.5ex 1ex 0.3ex 1ex; margin:0; }
     article a { text-decoration: underline;  }
     article { background-image: linear-gradient(var(--alt-bg-20) 0, var(--article-bg-color) 0.7em) }
     
