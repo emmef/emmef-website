@@ -135,6 +135,11 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 		font-family: 'Open Sans', calibri, verdana, sans-serif;
 	}
 
+    .highlight {
+        background-color: var(--foreground-color);
+        color: var(--background-color);
+    }
+
     table.colorbox tbody tr td { border: 0.1ex solid var(--alt-fg-30); vertical-align: top; }
     figure { border-color: var(--alt-bg-20); }
 

@@ -103,7 +103,7 @@ class DocumentDate {
     }
 }
 
-const CONTRASTS = [1, 0.8, 0.6, 0.4, -0.4, -0.6, -0.8, -1.0, ];
+const CONTRASTS = [1, 0.737, 0.543, 0.4, -0.4, -0.543, -0.737, -1.0, ];
 
 class EmmefUtil {
     constructor() {
