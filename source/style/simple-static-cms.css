@@ -209,7 +209,9 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     p, ul, ol { margin-bottom: 0.65em; }
     li { margin-bottom: 0.2955em; }
     h1 { font-size: 133%; margin-bottom: 0.25em; }
-    h2 { font-size: 110%; margin-bottom: 0.1477em; font-weight:bolder; font-style:italic; }
+    h2 { font-size: 110%; margin-bottom: 0.1477em; font-weight: bolder; }
+    h3 { font-size: 100%; margin-bottom: 0.12em; font-weight: bolder; font-style: italic; }
+    h4, h5, h6 { font-size: 100%; margin-bottom: 0.8em; font-style: italic; }
     dt { font-style: italic; font-weight: bolder; }
     dd { margin-bottom: 0.35em; margin-top: 0.20em; }
     #article-summary {
