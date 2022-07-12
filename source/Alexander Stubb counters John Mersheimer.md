@@ -44,7 +44,13 @@ Then he goes on to say that every country should be able to choose the security 
 
 Dr. Stubb's theory is exactly what it is: a theory. But also a utopia. Sovereignty for all does not work in practice. Mightier countries get away with more and can subdue other countries at will, with or without a UN charter. That proves some points Mearsheimer makes. You can, of course, omit the double standard. But that is hypocrisy, especially from someone from Finland. Finland that joined the Iraq war that was not sanctioned by the UN and was based on a false pretext.
 
-*4. Debunking "" (10:55) 
+*4. Debunking "This conflict is due to NATO expansion" (10:55) (whole response: see https://www.youtube.com/watch?v=vlB-pRqdyBg&lc=Ugxh_t9gFjzd4wNRmFt4AaABAg)
+
+Stubb first argues that the door to NATO was never open to Ukraine, because it was blocked by France and Germany. He is correct in the sense that Ukraine is not an *official* NATO member yet, and might never become one. However, If we read various official publications by NATO and the US government, the door was always open and Ukraine is a de facto member since November 2021.[4] Failing to mention this is at the least sloppy and insincere. And because of the way he later uses this argument, it is void.  
+
+Stubb meanders about the history of NATO and the NATO expansion in Europe. This is fina and illustrative. But then (12:37) he argues that NATO was never aggressive. However, NATO has violated the UN charter various times and prominent NATO members routinely do so and violate international law.[5] In addition, the most prominent member, the US, that has deep involvement or cooperation with most NATO members, regularly commit war crimes, and does not allow nations on the Western hemisphere the sovereignty to choose the security alliance the want (see Cuba crisis and the US aggression that led to it) and meddles in their governance all the time.[6] 
+
+Stubbs gives a lot of information, but also leaves out much, to finally draw a False conclusion. So this argument is void.  
 
 
 ___
@@ -61,7 +67,21 @@ https://wikileaks.org/plusd/cables/08MOSCOW265_a.html#efmBTnBfi
 and a quote from his memoirs as ambassador:
 https://en.wikipedia.org/wiki/William_J._Burns_(diplomat)#U.S._Foreign_Service
 
+[4]
+- Declaration of 2008 Bucharest summit (sub 23): https://www.nato.int/cps/en/natolive/official_texts_8443.htm#ukrgeo,
+- NATO recognises Ukraine as Enhanced Opportunities Partner (2020): https://www.nato.int/cps/en/natohq/news_176327.htm
+- U.S.-Ukraine Charter on Strategic Partnership (2021): https://www.state.gov/u-s-ukraine-charter-on-strategic-partnership/
+- NATO Relations with Ukraine: https://www.nato.int/cps/en/natohq/topics_37750.htm).
 
+[5]
+- https://en.wikipedia.org/wiki/Legitimacy_of_the_NATO_bombing_of_Yugoslavia
+- https://en.wikipedia.org/wiki/2003_invasion_of_Iraq#Criticism
+
+[6]
+- https://en.wikipedia.org/wiki/United_States_war_crimes
+- https://en.wikipedia.org/wiki/United_States_involvement_in_regime_change_in_Latin_America
+- https://en.wikipedia.org/wiki/Cuban_Missile_Crisis
+- https://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion
 
 ==============
 
