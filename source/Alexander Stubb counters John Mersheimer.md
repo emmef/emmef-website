@@ -6,6 +6,12 @@ I want to believe that Alexander's broadly shared ideas, lead us out of this mes
 
 Here follow my observations the five (work in progress) theses and Alexander debunking them.
 
+*My response was removed somehow, and it appears there is a length restriction on comments. I broke the response into multiple pieces.*
+
+
+
+Due to a length restriction in Youtube comments, I broke up the response in multiple pieces.  
+
 *1. Debunking of "Russia did not have a choice"* (3:03)
 
 This thesis is a simplification and interpretation of several things Mearsheimer said. Falsifying this synthetic, interpreted claim does not falsify these "several things that Mearsheimer said", and suggesting it does, is a classic "straw-man" logical fallacy.
@@ -44,16 +50,17 @@ Then he goes on to say that every country should be able to choose the security 
 
 Dr. Stubb's theory is exactly what it is: a theory. But also a utopia. Sovereignty for all does not work in practice. Mightier countries get away with more and can subdue other countries at will, with or without a UN charter. That proves some points Mearsheimer makes. You can, of course, omit the double standard. But that is hypocrisy, especially from someone from Finland. Finland that joined the Iraq war that was not sanctioned by the UN and was based on a false pretext.
 
-*4. Debunking "This conflict is due to NATO expansion" (10:55) (whole response: see https://www.youtube.com/watch?v=vlB-pRqdyBg&lc=Ugxh_t9gFjzd4wNRmFt4AaABAg)
+*4. Debunking "This conflict is due to NATO expansion" (10:55) 
 
-Stubb first argues that the door to NATO was never open to Ukraine, because it was blocked by France and Germany. He is correct in the sense that Ukraine is not an *official* NATO member yet, and might never become one. However, If we read various official publications by NATO and the US government, the door was always open and Ukraine is a de facto member since November 2021.[4] Failing to mention this is at the least sloppy and insincere. And because of the way he later uses this argument, it is void.  
+Stubb first argues that the door to NATO was never open to Ukraine, because it was blocked by France and Germany. He is correct in the sense that Ukraine is not an *official* NATO member yet, and might never become one. However, If we read various official publications by NATO and the US government, the door was always open and Ukraine is a de facto member since November 2021.[4] Failing to mention this is at the least sloppy and insincere, and the conclusion he arrives at is false, or at least a great misrepresentation..
 
-Stubb meanders about the history of NATO and the NATO expansion in Europe. This is fina and illustrative. But then (12:37) he argues that NATO was never aggressive. However, NATO has violated the UN charter various times and prominent NATO members routinely do so and violate international law.[5] In addition, the most prominent member, the US, that has deep involvement or cooperation with most NATO members, regularly commit war crimes, and does not allow nations on the Western hemisphere the sovereignty to choose the security alliance the want (see Cuba crisis and the US aggression that led to it) and meddles in their governance all the time.[6] 
+Stubb meanders about the history of NATO and the NATO expansion in Europe. This is fina and illustrative. But then (12:37) he argues that NATO was never aggressive and its very existence has been a guarantee for peace. However, NATO has violated the UN charter various times and prominent NATO members routinely do so and violate international law.[5] In addition, the most prominent member, the US, that has deep involvement or cooperation with most NATO members, regularly commit war crimes, and does not allow nations on the Western hemisphere the sovereignty to choose the security alliance the want (see Cuba crisis and the US aggression that led to it) and meddles in their governance all the time.[6] This time, Stubbs gives a lot of information, but also leaves out rather essential information that is remarkably easy to find, to therefore arrive at a conclusion that is simply untrue. This argument is void.  
 
-Stubbs gives a lot of information, but also leaves out much, to finally draw a False conclusion. So this argument is void.  
+Then he starts about Georgia. He disconnects it from NATO expansion and labels it as an expansionist act of aggression. However, 2008 Bucharest summit declaration explicitly states that the door is open for both Ukraine and Georgia.[4] In addition, and as mentioned earlier, it was well known in diplomatic circles that Russia did see NATO membership of Ukraine and Georgia as a threat (Let me come back to that later). William Burns, the US ambassador (now head CIA) also confirmed that it was not just Putin thinking that, but the whole Kremlin, including Putin's rivals.[3] Especially if he was there as a negotiator, as he states, he must have known all this. So the argument that the skirmishes had nothing to do with NATO expansion is void. As he also does not explain that the _actual drive_ was "expansionist behaviour to create instability", that is opinion or speculation that he uses as an authoritative argument, a logical fallacy. 
 
+Given the blatant omission or misrepresentation of easily available public and official information and tying it together with speculation and authoritative reasoning, this argument is completely bogus.
 
-___
+---
 
 [1]
 In his Realpolitik theory, there is an explicit disconnect between morality and ethics, and what nations do to protect what they deem as their national interests. The actions are often immoral and the interests are generally the interests of a small group. But that is beside the point. If a realist says that an action follows from a realpolitik perspective, it does not mean that this realist agrees with that action as a person.
@@ -64,7 +71,7 @@ See https://www.logicalfallacies.org/ or Wikipedia's list of fallacies: https://
 [3]
 For example, see diplomatic cable of William Burns (Ambassador USA in Kremlin in 2008; current head of CIA)
 https://wikileaks.org/plusd/cables/08MOSCOW265_a.html#efmBTnBfi
-and a quote from his memoirs as ambassador:
+and a quote from his memoirs as ambassador: 
 https://en.wikipedia.org/wiki/William_J._Burns_(diplomat)#U.S._Foreign_Service
 
 [4]
@@ -83,9 +90,8 @@ https://en.wikipedia.org/wiki/William_J._Burns_(diplomat)#U.S._Foreign_Service
 - https://en.wikipedia.org/wiki/Cuban_Missile_Crisis
 - https://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion
 
-==============
 
-Further responesed:
+Further responses:
 
 
 If only one school of thought is represented in public discourse, something is wrong. If more schools are represented, they should not just fight each other. They should define boundary conditions where each school delivers the best results or, better, come to a common theory that is better than both. I do not see this happen in schools of international relations. In addition, Western governance excludes schools like realpolitik in both politics and media.
@@ -136,3 +142,5 @@ Now, that we violate rule-based order so much, does not mean that Russia should 
 Naturally, we will never allow ourselves introspection. Given the last three decades of history, many countries see the West as a threat and find NATO's "defensive" qualifier laughable. As the UN charter also states that "No nation has the right to improve its security by diminishing that of others/neighbours", you might even say that Russia has a point. Let me be clear that this can never be a justification for starting a war. However, I think it is also "not done" to bring another country in a situation like this, by ignoring its concerns for more than 15 years.
 
 In my opinion, this war could have been prevented. First being consistent in applying rule-based order. And second,  by not opening the door to Ukraine NATO membership in 2008. Even the cold-war USSR and USA struck a compromise that Cuba would not join the Warsaw-pact, even though American aggression and meddling was the reason it wanted to join that pact in the first place. Also check out the "Monroe doctrine", that still holds. Then we'll talk about sovereignty.
+
+
