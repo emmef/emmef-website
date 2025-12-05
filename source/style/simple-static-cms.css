@@ -15,7 +15,7 @@ body {
 
 .reference-item { vertical-align: top;  }
 
-article { line-height: 1.5; hyphens: auto; }
+article { line-height: 1.5;  hyphens: auto; text-align: justify; }
 sup, sub {
     font-size: 60%;
     line-height: 1;
