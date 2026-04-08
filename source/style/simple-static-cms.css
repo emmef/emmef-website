@@ -15,7 +15,7 @@ body {
 
 .reference-item { vertical-align: top;  }
 
-article { line-height: 1.5;  hyphens: auto; text-align: justify; }
+article { line-height: 1.5;  /*hyphens: auto; */ text-align: left; }
 sup, sub {
     font-size: 60%;
     line-height: 1;
@@ -51,6 +51,28 @@ table.colorbox tbody tr td.description { text-align: left; }
 table.colorbox tfoot tr td.firstcolumn { padding-top: 0.4ex; border: none; text-align: left; vertical-align: top; min-width: 5em; }
 table.colorbox tfoot tr td { font-size: 90%; }
 table.colorbox tfoot tr td.firstcolumn { text-align: right; padding-right: 1ex;}
+
+table.definitions td { vertical-align: top; padding: 0 0 0.5em 0; }
+table.definitions td.def { min-width: 10em; }
+
+blockquote {
+    margin-left: 4ex;
+}
+
+
+blockquote:before {
+    position: absolute;
+    left: 1ex;
+    content: "\201c";
+    font-size: 200%;
+    font-weight: bolder;
+    opacity: 50%;
+}
+
+blockquote div {
+    padding: 0.5lh 0 0 0;
+    margin: 0;
+}
 
 td.marker-red { background: rgba(255,0,0,0.1); }
 td.marker-green { background: rgba(0,255,0,0.1); }
@@ -131,7 +153,8 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 		min-height: 10em;
 	}
 
-	* {
+
+    * {
 		font-family: 'Open Sans', calibri, verdana, sans-serif;
 	}
 
@@ -177,7 +200,7 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     article {  padding:0.5ex 1ex 0.3ex 1ex; margin:0; }
     article a { text-decoration: underline;  }
     article { background-image: linear-gradient(var(--alt-bg-20) 0, var(--article-bg-color) 0.7em) }
-    
+
     a.reference-ptr { font-size: 70%; font-weight: bold; line-height: 80%; vertical-align: super; text-decoration: none;}
     a.reference-ptr::before { content: "["; } /* \00a0 */
     a.reference-ptr::after { content: "]"; }
@@ -222,7 +245,7 @@ td.marker-green { background: rgba(0,255,0,0.1); }
         font-weight: normal;
     }
 
-    div.file-data { 
+    div.file-data {
     	color: var(--alt-fg-30); background:var(--background-color); padding: 0.2ex; width: 100%; text-align: center;
     	border-width: 0.1ex 0 0 0; border-color:var(--alt-bg-20); border-style: solid;
     }
@@ -266,13 +289,13 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 	}
 
 	a { text-decoration: none; color:inherit; }
-	div.references { 
-		border-width: 0.1ex 0 0 0; 
-		border-color:black;  
+	div.references {
+		border-width: 0.1ex 0 0 0;
+		border-color:black;
 		border-style: solid;
-		padding-top: 1ex; 
+		padding-top: 1ex;
 		font-size:80%; }
-		
+
    .reference-item-number { font-size:70%; text-align: left; padding-right:1em; }
    a.reference-ptr { font-size: 70%; font-style:italic; font-weight: bold; vertical-align:super; }
    a.reference-ptr::before { content: "\00a0"; }
@@ -281,7 +304,7 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 
 	#article-title { width: 100%; text-align: center; font-style:italic; padding-bottom: 1em; }
 	nav * { visibility: hidden; }
-	
+
 	div.file-data {
 			width: 100%;
 			padding-top: 1em;
