@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+outputDirectory="./source/uuid/"
+localMatcher="^(\./|)${outputDirectory}/.+$"
+checkedOutputDirectory=
+
+ensurePath() {
+  if [ -n "$checkedOutputDirectory" ] ; then
+    return 0
+  fi
+  checkedOutputDirectory="Yes"
+  if [ -d "${outputDirectory}" ] ; then
+    return 0
+  fi
+  echo "Creating output directory ${outputDirectory}."
+  mkdir -p "${outputDirectory}"
+}
+
+copyFile() {
+  local path
+  local scms_id_line
+  local scms_id
+  local target
+  local ids
+
+  path="$1"
+  scms_id_line=$(grep -E '<meta\s+name="scms-uuid"\s+value="[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}"/>' < "$path")
+
+  if [ -n "$scms_id_line" ] ; then
+    scms_id=$(echo "$scms_id_line" | sed -r 's|^.*"([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})".*|\1|')
+    target="${outputDirectory}/${scms_id}.html"
+    if [[ $ids =~ _${scms_id}_ ]] ; then
+      echo "Double identifier \"$scms_id\" for $path" >&2
+      return 1
+    fi
+    ids="${ids}_${scms_id}_"
+    echo "File $target := $path"
+    ensurePath
+    cp "${path}" "${target}"
+  fi
+}
+
+copyFiles() {
+  local path
+  local directory
+  local file
+
+  while IFS= read -r path ; do
+    if ! [[ $path =~ $localMatcher  ]] ; then
+      directory=$(dirname "$path")
+      file=$(basename "$path")
+      if ! [[ $directory =~ _ ]] ; then
+        if ! [[ $file =~ ^_ ]] ; then
+          copyFile "$path"
+        fi
+      fi
+    fi
+  done
+}
+
+find . -name '*.html' | copyFiles
