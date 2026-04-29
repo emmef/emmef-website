@@ -166,7 +166,10 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     table.colorbox tbody tr td { border: 0.1ex solid var(--alt-fg-30); vertical-align: top; }
     figure { border-color: var(--alt-bg-20); }
 
-    #article-title { visibility: hidden; display: none; }
+    #article-title { visibility: visible; font-size:150%; margin:0; width:100%;
+                background-color: var(--alt-bg-10);
+
+    }
 
     nav { border: none; }
     nav { padding: 0.2ex 0.5ex 0.2ex 0.5ex; }
@@ -191,15 +194,37 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     nav .siblings-separator { color:var(--alt-fg-20); }
     nav .siblings-separator-first::before { content: "//"}
     nav .siblings-separator-inner::before { content: "|"}
-    nav .contrast-setter { color: var(--alt-fg-30); }
+    
+    
+    nav .contrast-setter { 
+        color: var(--alt-fg-30); 
+        vertical-align:top;
+        text-align: left;
+        margin:0;
+        padding: 0 0.2em 0 0.2em;
+    }
     nav .contrast-setter:hover { color: var(--foreground-color); cursor: pointer; }
+    nav .tag-navigation { 
+        display: inline flow-root;
+        border:none;
+        margin:0;
+        padding: 0 0.5em 0 1em;
+        font-variant-caps: all-petite-caps;
+        vertical-align:top;
+        text-align: right
+    }
+    nav .tag-navigation span {
+        padding: 0 0 0 1em;
+    }
 
     nav a { text-decoration: none; }
     a.latest-article-category { text-decoration: none; }
 
     article {  padding:0.5ex 1ex 0.3ex 1ex; margin:0; }
     article a { text-decoration: underline;  }
-    article { background-image: linear-gradient(var(--alt-bg-20) 0, var(--article-bg-color) 0.7em) }
+    /*article { background-image: linear-gradient(var(--alt-bg-20) 0, var(--article-bg-color) 0.7em) */
+        
+    }
 
     a.reference-ptr { font-size: 70%; font-weight: bold; line-height: 80%; vertical-align: super; text-decoration: none;}
     a.reference-ptr::before { content: "["; } /* \00a0 */
@@ -208,19 +233,21 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 	a:hover { text-decoration: underline; }
 
 	div.references {
-        border: none;
+        border-width: 1em 0 0 0;
+        border-color: var(--alt-bg-10);
+        border-style:solid;
         padding: 0.5em 0.5em 0.5em 0.5em;
         background-color: var(--background-color);
-        background-image: linear-gradient(var(--refs-bg-color) 0%, var(--background-color) 0.6em );
-        background-position: top;
+        /*background-image: linear-gradient(var(--refs-bg-color) 0%, var(--background-color) 0.6em );*/
+        /*background-position: top;*/
 	}
     .reference-list {
-        margin:0;
+        margin:1em 0 0 0;
         padding: 0 0 0 0.5ex;
     }
     footer { padding:0; margin: 0; }
 
-    .reference-item { vertical-align: top;  }
+    .reference-item { vertical-align: top; font-size: 90%;}
     .reference-item a { color: inherit; }
     td.reference-item-content { padding: 0 0 0.5em 0; }
 
