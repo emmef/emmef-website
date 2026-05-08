@@ -171,6 +171,11 @@ td.marker-green { background: rgba(0,255,0,0.1); }
 
     }
 
+    :target {
+        background-color: var(--alt-bg-10) ;
+    }
+
+
     nav { border: none; }
     nav { padding: 0.2ex 0.5ex 0.2ex 0.5ex; }
 
@@ -194,17 +199,17 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     nav .siblings-separator { color:var(--alt-fg-20); }
     nav .siblings-separator-first::before { content: "//"}
     nav .siblings-separator-inner::before { content: "|"}
-    
-    
-    nav .contrast-setter { 
-        color: var(--alt-fg-30); 
+
+
+    nav .contrast-setter {
+        color: var(--alt-fg-30);
         vertical-align:top;
         text-align: left;
         margin:0;
         padding: 0 0.2em 0 0.2em;
     }
     nav .contrast-setter:hover { color: var(--foreground-color); cursor: pointer; }
-    nav .tag-navigation { 
+    nav .tag-navigation {
         display: inline flow-root;
         border:none;
         margin:0;
@@ -223,7 +228,7 @@ td.marker-green { background: rgba(0,255,0,0.1); }
     article {  padding:0.5ex 1ex 0.3ex 1ex; margin:0; }
     article a { text-decoration: underline;  }
     /*article { background-image: linear-gradient(var(--alt-bg-20) 0, var(--article-bg-color) 0.7em) */
-        
+
     }
 
     a.reference-ptr { font-size: 70%; font-weight: bold; line-height: 80%; vertical-align: super; text-decoration: none;}
