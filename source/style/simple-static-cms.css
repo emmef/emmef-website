@@ -226,6 +226,10 @@ td.marker-green {
                 calc(0.8 * var(--bg-red) + 0.2 * var(--fg-red)),
                 calc(0.8 * var(--bg-green) + 0.2 * var(--fg-green)),
                 calc(0.8 * var(--bg-blue) + 0.2 * var(--fg-blue)));
+        --alt-bg-30: rgb(
+                calc(0.7 * var(--bg-red) + 0.3 * var(--fg-red)),
+                calc(0.7 * var(--bg-green) + 0.3 * var(--fg-green)),
+                calc(0.7 * var(--bg-blue) + 0.3 * var(--fg-blue)));
         --alt-fg-10: rgb(
                 calc(0.1 * var(--bg-red) + 0.9 * var(--fg-red)),
                 calc(0.1 * var(--bg-green) + 0.9 * var(--fg-green)),
@@ -366,10 +370,6 @@ td.marker-green {
         color: var(--foreground-color);
     }
 
-
-    a.latest-article-category {
-        text-decoration: none;
-    }
 
     article {
         padding: 0.5ex 1ex 0.3ex 1ex;
@@ -529,13 +529,19 @@ td.marker-green {
         display: inline;
     }
 
-    div.latest-articles-item {
-        min-height: 5em;
-        overflow: hidden;
+    div.latest-articles {
+        padding:0;
+        margin: 0;
+    }
+
+    div.latest-articles-item, div.latest-articles-item-first {
         position: relative;
-        background-image: linear-gradient(var(--latest-article-bg-color) 0%, var(--background-color) 0.6em);
         border: none;
-        border-bottom: 0.4em solid var(--article-bg-color);
+        border-bottom: 0.2em solid var(--alt-bg-10);
+    }
+
+    div.latest-articles-item-first {
+        border-top: 0.2em solid var(--alt-bg-10);
     }
 
     div.latest-articles-item:before {
@@ -545,19 +551,48 @@ td.marker-green {
         height: var(--last-article-gradient-height);
         left: 0;
         bottom: 0;
-        background: linear-gradient(transparent 0%, var(--background-color));
     }
 
-    div.latest-articles-item-first {
-        max-height: 15em;
-    }
-
-    div.latest-articles-item-subsequent {
-        height: 7.5em;
-    }
 
     div.latest-article-title a {
         text-decoration: none;
+    }
+
+    div.sub-tag-list {
+        background-color: var(--alt-bg-10);
+        padding: 0.3em 0 0.1em 0.2em;
+    }
+
+    div.sub-tag-list a {
+        text-decoration: none;
+        font-variant-caps: all-small-caps;
+        font-size: 110%;
+        background-color: var(--alt-bg-20);
+        border-color: var(--alt-bg-20);
+        border-style: solid;
+        border-width: 0.2ex;
+        border-radius: 0.5ex;
+        padding: 0 0.2em 0 0.2em;
+    }
+
+    div.sub-tag-list a.tag-selected {
+        background-color: var(--foreground-color);
+        color: var(--background-color);
+        border-color: var(--foreground-color);
+    }
+
+    div.sub-tag-list span.sub-tag-before {
+        padding: 0;
+    }
+
+    div.sub-tag-list span.sub-tag-after {
+        padding: 0.2em;
+    }
+
+    div.sub-tag-list span.sub-tag-separator {
+        background-color: var(--alt-bg-30);
+        padding: 0.2em;
+        margin: 0 0.7em 0 0;
     }
 
     .youtube-frame {
