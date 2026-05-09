@@ -297,9 +297,9 @@ td.marker-green {
 
     nav {
         display: grid;
-        grid-template-columns: 60% auto 2em;
+        grid-template-columns: 50% auto 2em;
         align-items: baseline;
-        padding: 0.2ex 0.5ex 0.2ex 0.5ex;
+        padding: 0.1em 0.1em 0.5em 0.1em;
         background-color: var(--alt-bg-10);
         color: var(--foreground-color);
         border: none;
@@ -331,7 +331,7 @@ td.marker-green {
         background-color: var(--alt-bg-10);
         text-align: right;
         margin: 0;
-        padding: 0 0 0 1em;
+        padding: 0 0 0 0.5em;
     }
 
     nav .contrast-setter:hover {
@@ -347,12 +347,17 @@ td.marker-green {
         font-variant-caps: all-petite-caps;
         vertical-align: top;
         text-align: right;
+        font-size: 110%;
         /*width: 25%;*/
     }
 
     nav a {
         text-decoration: none;
-        padding: 0 0 0 1em;
+        border: 0.2em solid var(--alt-bg-20);
+        border-radius: 0.5ex;
+        padding: 0 0.5em 0 0.5em;
+        background-color: var(--alt-bg-20);
+        margin: 0 0 0 0.5em;
     }
 
 
@@ -409,7 +414,7 @@ td.marker-green {
         border-width: 1em 0 0 0;
         border-color: var(--alt-bg-10);
         border-style: solid;
-        padding: 0.5em 0.5em 0.5em 0.5em;
+        padding: 0; /*0.5em 0.5em 0.5em 0.5em;*/
         background-color: var(--background-color);
         /*background-image: linear-gradient(var(--refs-bg-color) 0%, var(--background-color) 0.6em );*/
         /*background-position: top;*/
@@ -435,7 +440,7 @@ td.marker-green {
     }
 
     td.reference-item-content {
-        padding: 0 0 0.5em 0;
+        padding: 0 0 1em 0;
     }
 
     .reference-item-number {
@@ -508,13 +513,11 @@ td.marker-green {
 
     div.file-data {
         color: var(--alt-fg-30);
-        background: var(--background-color);
+        background: var(--alt-bg-10);
         padding: 0.2ex;
         width: 100%;
         text-align: center;
-        border-width: 0.1ex 0 0 0;
-        border-color: var(--alt-bg-20);
-        border-style: solid;
+        border: none;
     }
 
     div.source-modification::before {
@@ -537,12 +540,14 @@ td.marker-green {
     div.latest-articles-item, div.latest-articles-item-first {
         position: relative;
         border: none;
-        border-bottom: 0.2em solid var(--alt-bg-10);
     }
 
-    div.latest-articles-item-first {
+    div.latest-articles-item {
+        position: relative;
+        border: none;
         border-top: 0.2em solid var(--alt-bg-10);
     }
+
 
     div.latest-articles-item:before {
         position: absolute;
@@ -556,6 +561,8 @@ td.marker-green {
 
     div.latest-article-title a {
         text-decoration: none;
+        font-size: 120%;
+        font-weight: normal;
     }
 
     div.sub-tag-list {
@@ -579,6 +586,7 @@ td.marker-green {
         background-color: var(--foreground-color);
         color: var(--background-color);
         border-color: var(--foreground-color);
+        font-weight: bolder;
     }
 
     div.sub-tag-list span.sub-tag-before {
