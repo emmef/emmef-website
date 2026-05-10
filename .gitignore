@@ -2,6 +2,10 @@
 *~
 *.backup
 
+# Other files
+
+.directory
+
 # IDE files
 .idea/**
 
