@@ -92,7 +92,7 @@ class DocumentDate {
     }
 
     static replaceDates() {
-        let list = document.body.getElementsByClassName("milliseconds-age");
+        let list = document.body.getElementsByClassName("milliseconds-date");
         const now = new Date();
         for (let element of list) {
             let date = DocumentDate.getElementDate(element);
@@ -190,4 +190,3 @@ class EmmefUtil {
 }
 
 EmmefUtil.applyStoredContrast();
-
