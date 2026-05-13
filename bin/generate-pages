@@ -12,7 +12,7 @@ absolutePath() {
   else
     ALLOW_CREATE=
   fi
-  if [ ! -d "$PATH_TO_USE" ] 
+  if [ ! -d "$PATH_TO_USE" ]
   then
     if [ -n "$ALLOW_CREATE" ]
     then
@@ -24,7 +24,7 @@ absolutePath() {
 	  fi
 	fi
   fi
-  if [ -d "$PATH_TO_USE" ] 
+  if [ -d "$PATH_TO_USE" ]
   then
   	if pushd "$PATH_TO_USE" 2>&1 >/dev/null
 	then
@@ -33,7 +33,7 @@ absolutePath() {
 		return
 	fi
   fi
-  echo ""  
+  echo ""
 }
 
 INVOCATION_DIR=`dirname $0`
@@ -41,30 +41,31 @@ SCRIPT_PATH=`absolutePath "$INVOCATION_DIR"`
 JAR_PATH="$SCRIPT_PATH/cms-core.jar"
 SOURCE_PATH=`absolutePath "$SCRIPT_PATH/../source"`
 TARGET_PATH=`absolutePath "$SCRIPT_PATH/../../public_html" --create`
+TARGET_SITE=`absolutePath "$SCRIPT_PATH/../../public_html/blog" --create`
 
-if [ -z "$SCRIPT_PATH" ] 
+if [ -z "$SCRIPT_PATH" ]
 then
 	echo "Cannot find where I am via invocation: $0" >&2
 	exit 1
 fi
-if [ ! -f "$JAR_PATH" ] 
+if [ ! -f "$JAR_PATH" ]
 then
 	echo "Cannot find page generation JAR: $JAR_PATH" >&2
 	exit 1
 fi
 
 
-if [ -z "$SOURCE_PATH" ] 
+if [ -z "$SOURCE_PATH" ]
 then
 	echo "Cannot find site source file directory: $SOURCE_PATH"
 	exit 1
 fi
-if [ -z "$TARGET_PATH" ] 
+if [ -z "$TARGET_PATH" ]
 then
 	echo "Cannot find site path: $TARGET_PATH"
 	exit 1
 fi
-if [ ! -d "$TARGET_PATH" ] 
+if [ ! -d "$TARGET_PATH" ]
 then
 	if ! mkdir -p "$TARGET_PATH"
 	then
@@ -75,8 +76,4 @@ fi
 
 echo "Generating site \"$TARGET_PATH\" from source \"$SOURCE_PATH\""
 
-java -jar "$JAR_PATH" --source-root "$SOURCE_PATH" --target "$TARGET_PATH" --copyright "Michel Fleur"
-
-
-
-
+java -jar "$JAR_PATH" --source-root "$SOURCE_PATH" --target "$TARGET_PATH" --target-site "$TARGET_SITE" --copyright "Michel Fleur"
