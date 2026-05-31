@@ -4,6 +4,20 @@ const DateDisplayType = {
     VAR : "format.dateDisplayType",
 };
 
+const long_date_options = {
+    // weekday: "",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+};
+const short_date_options = {
+    // weekday: "",
+    // year: "",
+    month: "long",
+    day: "numeric",
+};
+
+
 class DocumentDate {
     static getDateDisplayType() {
         let storedValue = window.localStorage.getItem(DateDisplayType.VAR);
@@ -74,7 +88,11 @@ class DocumentDate {
         return result;
     }
 
-
+    static getLocale() {
+        let lang = document.documentElement.lang;
+        console.log("Language: " + lang);
+        return lang;
+    }
 
     static getElementDate(element) {
         if (typeof(element.emmefStamp) === "number") {
@@ -97,7 +115,8 @@ class DocumentDate {
         for (let element of list) {
             let date = DocumentDate.getElementDate(element);
             if (date !== null) {
-                element.innerHTML = DocumentDate.getDisplayAgeFromMilliSeconds(now, date);
+                let usedOptions = date.getFullYear() < now.getFullYear() && date.getMonth() <= now.getMonth() ? long_date_options : short_date_options;
+                element.innerHTML = date.toLocaleDateString(DocumentDate.getLocale(), usedOptions);
             }
         }
     }
