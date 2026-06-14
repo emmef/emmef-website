@@ -257,13 +257,31 @@ blockquote:before {
 blockquote p {
     padding: 0.5lh 0 0 0;
     margin: 0;
-    font-size: 110%;
+    font-size: 105%;
+    font-style: italic;
     opacity: 70%;
 }
 
 blockquote p + p {
     padding: 0;
     margin-left: 1em;
+}
+
+p.explanation {
+    margin-left: 1em;
+}
+
+p.ironic {
+    font-style: italic;
+}
+
+p.ironic em, blockquote p em {
+    font-style: normal;
+}
+
+p.ironic + p.ironic {
+    text-indent: 1em;
+    margin-top:0;
 }
 
 
