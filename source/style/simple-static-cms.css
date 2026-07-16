@@ -17,7 +17,7 @@
 body {
     min-width: 10em;
     max-width: 50em;
-    font-size: 12pt;
+    font-size: 14pt;
     border: none;
 }
 
@@ -50,7 +50,7 @@ nav {
 
 article {
     margin: 0 var(--text-margin);
-    line-height: 1.25;
+    line-height: 1.42;
     padding: var(--text-margin) 0;
 }
 
@@ -88,12 +88,16 @@ p + p, ul, ol {
     margin-top: 0.5em;
 }
 
-div.footnote-content p {
+div.footnote-content p,ul,ol {
     margin-top: 0;
 }
 
+div.footnote-content ul,ol {
+    margin-left: 1em;
+}
+
 div.footnote-content p + p {
-    text-indent: 1em;
+    margin-top: 0.15lh;
 }
 
 li {
@@ -258,13 +262,13 @@ blockquote p {
     padding: 0.5lh 0 0 0;
     margin: 0;
     font-size: 105%;
-    font-style: italic;
+    font-style: normal;
     opacity: 70%;
 }
 
 blockquote p + p {
-    padding: 0;
-    margin-left: 1em;
+    padding: 0.15lh 0 0 0;
+    /* margin-left: 1em;*/
 }
 
 p.explanation {
@@ -272,11 +276,11 @@ p.explanation {
 }
 
 p.ironic {
-    font-style: italic;
+    font-style: normal;
 }
 
 p.ironic em, blockquote p em {
-    font-style: normal;
+    font-style: italic;
 }
 
 p.ironic + p.ironic {
