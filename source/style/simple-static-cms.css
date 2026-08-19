@@ -159,6 +159,7 @@ section,.tag-link,.footnote-link {
     break-inside: avoid;
 }
 
+
 .latest-article-list div.list-entry {
     display: grid;
     grid-template-columns: auto auto;
@@ -168,7 +169,8 @@ section,.tag-link,.footnote-link {
 
 .latest-article-list div.latest-article-title {
     text-align: left;
-    font-size: 120%;
+    font-size: 110%;
+    padding-left: 1rem;
 }
 
 .latest-article-list div.latest-article-title a {
@@ -186,7 +188,9 @@ section,.tag-link,.footnote-link {
 
 .latest-article-list div.latest-article-content {
     padding-top: 0.2rem;
+    padding-left: 1em;
     grid-column: 1/-1;
+    font-size: 90%;
 }
 
 .latest-article-list div.last-entry {
@@ -365,6 +369,16 @@ p.ironic + p.ironic {
         --max-last-article-summary-height: 6em;
         --last-article-gradient-height: 2em;
         --max-last-article-item-height: calc(--max-last-article-summary-height + --last-article-gradient-height);
+
+        a.footnote-link {
+            padding: 0 0.5em 0 0.1em;
+        }
+
+        a.footnote-link:hover {
+            background-color: var(--foreground-color);
+            color: var(--background-color);
+        }
+
     }
 
     body {
