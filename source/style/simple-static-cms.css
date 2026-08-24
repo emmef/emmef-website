@@ -204,7 +204,7 @@ a.footnote-link {
     line-height: 80%;
     vertical-align: super;
     text-decoration: none;
-    font-style: italic;
+    font-style: normal;
 }
 
 /*a.footnote-link:before {*/
@@ -231,7 +231,7 @@ a.footnote-extern:before {
 .footnote-list div.footnote-number {
     text-align: right;
     padding: 0 0.5rem 0 0;
-    font-style: italic;
+    font-style: normal;
     font-size:80%;
     vertical-align: super;
 }
