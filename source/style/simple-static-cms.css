@@ -2,6 +2,7 @@
 
 :root {
     --text-margin: 0.25rem;
+    --line-height: 1.42;
 }
 
 * {
@@ -50,7 +51,7 @@ nav {
 
 article {
     margin: 0 var(--text-margin);
-    line-height: 1.42;
+    line-height: var(--line-height);
     padding: var(--text-margin) 0;
 }
 

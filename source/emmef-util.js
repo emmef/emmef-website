@@ -90,7 +90,6 @@ class DocumentDate {
 
     static getLocale() {
         let lang = document.documentElement.lang;
-        console.log("Language: " + lang);
         return lang;
     }
 
@@ -141,18 +140,21 @@ class EmmefUtil {
             window.setTimeout(replaceDataThread, 10000);
         };
         replaceDataThread();
+        EmmefUtil.applyStoredContrast();
+        EmmefUtil.applyStoredSerifState();
+
     }
 
     static getStoredContrastIdx() {
-        let contrastText = window.localStorage.getItem("color.contrast");
-        let contrast = 1.0 * contrastText;
+        let contrastText = 1.0 * window.localStorage.getItem("color.contrast");
+        let contrast = isNaN(contrastText) ? "1.0" : 1.0 * contrastText;
+
         return Math.max(0, Math.min(contrast, CONTRASTS.length - 1));
     }
 
     static applyStoredContrast() {
         let idx = EmmefUtil.getStoredContrastIdx();
         let contrast = Math.min(Math.max(CONTRASTS[idx], -1), 1);
-        window.console.log("Contrast: "+ contrast);
         document.documentElement.style.setProperty("--contrast", "" + contrast);
     }
 
@@ -206,6 +208,65 @@ class EmmefUtil {
             }
         }
     }
-}
 
-EmmefUtil.applyStoredContrast();
+    static toggleSerifState() {
+        let storedState = EmmefUtil.getStoredSerifState();
+        let newState = EmmefUtil.getNextSerifState(storedState);
+        EmmefUtil.setStoredSerifState(newState);
+        EmmefUtil.applyStoredSerifState();
+    }
+
+    static applyStoredSerifState() {
+        let state = EmmefUtil.getStoredSerifState();
+        switch (state) {
+            case "s":
+                document.documentElement.style.setProperty("font-family", "serif");
+                break;
+            case "n":
+                document.documentElement.style.setProperty("font-family", "OpenSans, \"Open Sans\", sans-serif");
+                break;
+            default:
+                document.documentElement.style.removeProperty("font-family");
+        }
+    }
+
+    static getStoredSerifState() {
+        return EmmefUtil.getSanitizedState(window.localStorage.getItem("text.serif-state"));
+    }
+
+    static setStoredSerifState(state) {
+        let sanitized = EmmefUtil.getSanitizedState(state);
+        if (sanitized) {
+            window.localStorage.setItem("text.serif-state", sanitized);
+        }
+        else {
+            window.localStorage.removeItem("text.serif-state");
+        }
+    }
+
+    static getSanitizedState(value) {
+        if (typeof (value) === "string") {
+            switch (value) {
+                case "S" :
+                case "s":
+                    return "s";
+                case 'N' :
+                case 'n':
+                    return "n";
+            }
+        }
+        return null;
+
+    }
+
+    static getNextSerifState(state) {
+        switch (state) {
+            case "s":
+                return "n";
+            case "n":
+                return null;
+            default:
+                return "s";
+        }
+    }
+}
