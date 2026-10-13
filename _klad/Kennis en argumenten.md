@@ -1,10 +1,12 @@
 Hoe meer je weet, hoe meer je beseft dat je veel niet zeker weet, hoeveel je nog niet weet, dat er complexe relaties bestaan tussen dat alles, en dat je dus kritisch moet blijven op wat je denkt te weten en denkt te kunnen zeggen.
 
-Een thema dat in veel vakgebieden terugkeert, is dat logenstraffen mogelijk is en slechts een succesvolle poging behoeft, terwijl bewijzen veel werk is, of geheel onmogelijk. (volledigheid; bewijsbaarheid) 
-Wel moet alle kennis in een kennisverzameling, zoals die van een vakgebied, consistent zijn, wat betekent dat er geen onderlinge tegenstrijdigheden voorkomen.
+In veel vakgebieden is bewijzen lastiger dan logenstraffen, of domweg onmogelijk. (volledigheid; bewijsbaarheid)
+Het is dus niet altijd mogelijk om te bepalen of alle kennis in de kennisverzameling van een vakgebied _waar_ is.
+Er mogen echter nooit tegenstrijdigheden tussen kennis binnen de verzameling voorkomen. (voetnoot toevoegen met theorieën over waarheid binnen kennistheorie, waarin ook voor de consensus theorie consistentie geldt)
 
-Een kennisverzameling kan bestaan uit _triviale_ kennis en afgeleide kennis. 
-Ter volledigheid: een bewezen stelling, een afgeleid feit, of een afgeleide theorie zijn allemaal afgeleide kennis.
+
+Een kennisverzameling kan bestaan uit _triviale_ kennis en afgeleide kennis.
+Axioma's zijn als grondslag aanvaardde maar _onbewezen_ beweringen en worden hier ook als kennis beschouwd. 
 
 # Triviale kennis
 
@@ -22,9 +24,11 @@ Echter, kwalificaties als “onafhankelijk” en “betrouwbaar” zijn subjecti
 Waar nog bij komt dat het “iets” ook daadwerkelijk triviaal moet zijn, en niet afgeleid.
 En zelfs als de kwalificaties kloppen, dan zal verderop blijken dat het geen onomstotelijk argument is dat het “iets” klopt. 
 
-Kennis waarvan de trivialiteit niet vast staat, is dus afgeleid, in welk geval die afleiding zal moeten worden getoetst. Recursief.    
+Kennis waarvan de trivialiteit niet vast staat, is dus afgeleid, in welk geval die afleiding zal moeten worden getoetst. Recursief.
 
 # Afgeleide kennis
+
+Een bewezen stelling, een conclusie van een analyse, een afgeleid feit, of een afgeleide theorie zijn allemaal afgeleide kennis.
 
 Het afleiden van (nieuwe) kennis gebeurt via correcte argumentatie. 
 Bij correcte argumentatie is de afgeleide kennis de logische consequentie van de aangenomen kennis, via de logische redenering.
