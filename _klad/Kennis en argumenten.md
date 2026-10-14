@@ -1,7 +1,9 @@
-Hoe meer je weet, hoe meer je beseft dat je veel niet zeker weet, hoeveel je nog niet weet, dat er complexe relaties bestaan tussen dat alles, en dat je dus kritisch moet blijven op wat je denkt te weten en denkt te kunnen zeggen.
+Hoe meer je weet, hoe meer je beseft hoeveel je niet zeker weet of slechts denkt te weten, hoeveel je nog niet weet, en hoezeer conclusies afhangen van weegfactoren en precieze vraagstelling.
 
-In veel vakgebieden is bewijzen lastiger dan logenstraffen, of domweg onmogelijk. (volledigheid; bewijsbaarheid)
+De wereld is complex en vaak is het antwoord op een vraag “het hangt ervan af”. Dan is er nog het begrip waarheid en het bewijzen ervan. In veel vakgebieden is bewijzen lastiger dan logenstraffen, of domweg onmogelijk. (volledigheid; bewijsbaarheid)
 Het is dus niet altijd mogelijk om te bepalen of alle kennis in de kennisverzameling van een vakgebied _waar_ is.
+
+Binnen kennistheorie zijn er verschillende 
 Er mogen echter nooit tegenstrijdigheden tussen kennis binnen de verzameling voorkomen. (voetnoot toevoegen met theorieën over waarheid binnen kennistheorie, waarin ook voor de consensus theorie consistentie geldt)
 
 
