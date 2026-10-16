@@ -1,4 +1,52 @@
-Hoe meer je weet, hoe meer je beseft hoeveel je niet zeker weet of slechts denkt te weten, hoeveel je nog niet weet, en hoezeer conclusies afhangen van weegfactoren en precieze vraagstelling.
+Wanneer is kennis waar?
+
+Elk vakgebied heeft een kennisverzameling en de kennis daarin heeft, als het goed is, een relatie met de waarheid.  
+Een aantal theorieën over waarheid binnen kennistheorie zijn de correspondentietheorie, coherentietheorie, en consensustheorie. 
+Andere theorieën worden hier buiten beschouwing gelaten omdat ze naar mijn mening niet nuttig zijn in een wereldlijke context.
+
+De correspondentietheorie vereist voor waarheid een altijd correspondentie (van kennis) met de werkelijkheid.
+De vervolgvraag is natuurlijk wat werkelijkheid is.
+De oude grieken hadden het over de correspondentie met het verstand, of soms de zuivere werkelijkheid (van Plato).
+In empirische context is de werkelijkheid vaak alleen te benaderen en niet te bewijzen. En wat is verstand?
+De pure vorm van deze theorie is in veel vakgebieden dus niet nuttig.
+Wel kan gekeken naar de sterkte van de correspondentie.
+Zo is het vaak mogelijk om de werkelijkheid _goed genoeg_ te beschrijven.
+Zolang dat strikt gedefinieerd is, kan de theorie alsnog nuttig zijn.
+
+In de coherentietheorie bestaat de waarheid van kennis uit de onderlinge relaties ertussen: kennis mag niet onderling tegenstrijdig zijn (consistent) en moet elkaar ook wederzijds ondersteunen (coherent).
+Het is echter mogelijk om een volledig coherent systeem op te stellen over falatoeloezoeluizen en groenbordpunten die, voor de duidelijkheid, tot nu toe geen enkele correspondentie met de werkelijkheid hebben.
+Coherentie alleen is dus noodzakelijk en lovenswaardig, maar niet genoeg. 
+
+In de modernere consensustheorie is waarheid een resultaat van een rationele consensus. 
+Die rationaliteit komt tot stand op basis van een zo breed toegankelijk mogelijke discussie die gebaseerd is op argumentatie en niet op machtsverhoudingen of betrouwbaarheid.
+De kans is natuurlijk aanwezig dat een toekomstige discussie de consensus doet veranderen.
+De kans is ook aanwezig dat de consensus niet coherent is met de andere consensussen in de kennisverzameling.
+Van de nuttige theorieën vind ik dit zelf de zwakste.
+Ten eerste omdat de theorie zélf niet rept over coherentie van de consensus met andere consensussen in de kennisverzameling.
+Ten tweede omdat de theorie zélf niet per se correcte argumentatie afdwingt, waardoor overtuigende, maar incorrecte argumentatie de consensus kan beïnvloeden.
+Dat maakt het gebruik van drogredenen mogelijk, die machtsverhoudingen weer de discussie in kunnen smokkelen.
+
+Voor de wereldlijke context wordt hier de volgende consensus over kennisverzamelingen en waarheid gehanteerd:  
+* De correspondentie van kennis (in de kennisverzameling) met de werkelijkheid is zo goed als mogelijk.
+* De kennisverzameling is coherent
+* Consensus is acceptabel als, en slechts als deze tot stand komt op basis van correcte argumentatie. 
+
+
+
+
+
+
+Het zou vreemd zijn als de consensus niet coherent zou zijn met  
+
+
+niet bestaande dingen.  
+In de meeste empirische wetenschappen is dat lastig, omdat theorieën die een empirisch verschijnsel 
+, van de zeer strikte correspondentietheorie en coherentietheorie tot de lossere consensustheorie.
+
+
+. Van de  van zeer strict tot extreem los..
+
+
 
 De wereld is complex en vaak is het antwoord op een vraag “het hangt ervan af”. Dan is er nog het begrip waarheid en het bewijzen ervan. In veel vakgebieden is bewijzen lastiger dan logenstraffen, of domweg onmogelijk. (volledigheid; bewijsbaarheid)
 Het is dus niet altijd mogelijk om te bepalen of alle kennis in de kennisverzameling van een vakgebied _waar_ is.
