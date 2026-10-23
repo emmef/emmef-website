@@ -1,4 +1,59 @@
 Wanneer is kennis waar?
+Hoe zou kennis zich moeten verhouden met andere kennis?
+Hoe kan nieuwe kennis worden afgeleid van andere?
+
+Kennistheorie gaat over deze vragen, waarvan hier een beknopte doch correcte kern uiteen wordt gezet.
+Die is volgens mij goed genoeg voor allesbehalve volledig abstracte en onwereldlijke vakgebieden.
+Ik maak hierbij keuzes uit kennistheorie die ik uitleg in “Totstandkoming van de kern”.
+Beperkingen zal ik aangeven waar ik zie dat ze nodig zijn; de kans bestaat dat ik dingen over het hoofd zie.
+
+## De kern
+
+De kennis van vakgebied of de overtuigingen van iemand zijn voorbeelden van kennisverzamelingen.
+
+Zo'n kennisverzameling moet minimaal consistent zijn, dus zonder onderlinge tegenstrijdigheden.
+Het liefst moet de verzameling ook coherent zijn, wat behalve consistentie ook nog vereist dat de kennis elkaar onderling ondersteunt.
+
+Het is in veel vakgebieden gewenst om een correspondentie te hebben tussen kennis en de werkelijkheid. 
+Wat is waar?
+Een coherente kennisverzameling over het ecosysteem van Falatoeloezoeluizen en Groenbordpunten is prima mogelijk, maar heeft voor zover ik weet geen enkele relatie met de werkelijkheid.
+
+De mate van correspondentie kan per vakgebied verschillen.
+In de wiskunde kunnen met een set axioma's stellingen worden bewezen.
+In vakgebieden waar theorieën empirische verschijnselen modelleren, is aannemelijk maken het hoogst mogelijke.
+Logenstraffen kan wel.
+En soms men beperkingen definiëren waarbinnen de correspondentie met de werkelijkheid goed genoeg is.
+
+Dat op pagina 3 van een specifieke uitgave van een specifiek boek een stelling staat, kan triviaal worden vastgesteld.
+Het is een triviaal feit dat die stelling daar staat, maar dat zegt op zichzelf niets over de correspondentie van die stelling met de werkelijkheid.
+
+Het vaststellen van de correspondentie met de werkelijkheid kan dus behoorlijk complex zijn, of het is slechts bij benadering mogelijk.
+Hetzelfde geldt voor het aanvaarden van een claim aan een kennisverzameling als kennis of “feit”.
+Wel kan een claim direct worden afgewezen als coherentie of zelfs consistentie wordt geschaad.
+
+Een claim of potentieel feit kan dus worden aanvaard of toegevoegd als kennis.
+Een andere manier om kennis toe te voegen aan een kennisverzameling is door deze af te leiden.
+
+Het afleiden van kennis wordt gedaan via correcte argumentatie.
+Bij correcte argumentatie is de conclusie de logische consequentie van aangenomen kennis, cia logisch redeneren.
+Bij incorrecte argumentatie bestaat dit verband niet, en zegt de argumentatie niets over de juistheid van de conclusie.
+Daarom levert correcte argumentatie als enige conclusies op die aanvaardbaar zijn als kennis.
+
+Aanvaardbaarheid door correcte argumentatie is op zich niet voldoende om de conclusie op te nemen in een kennisverzameling.
+De resulterende verzameling moet ook weer consistent en liefst coherent zijn.
+En aangezien de conclusie de logische consequentie van de aangenomen kennis is, is die ook onderdeel van die resulterende kennisverzameling.  
+
+## Drogredenen
+
+Fouten in argumentatie noemt men drogredenen. 
+Fouten in de logische redenering zelf zijn formele drogredenen.
+Denk aan het omkeren van een implicatie.
+Andere fouten in argumentatie zijn informele drogredenen.
+Denk aan het gebruik van aangenomen kennis die helemaal niet in de afleiding van de conclusie voorkomt.
+Deze “valse premisse” heeft dus geen enkele invloed op de juistheid van de conclusie.
+Een voorbeeld van dit type drogreden is het beroep op autoriteit, dat uit de retorica afkomstig is.
+
+## Totstandkoming van de kern
 
 Elk vakgebied heeft een kennisverzameling en de kennis daarin heeft, als het goed is, een relatie met de waarheid.  
 Een aantal theorieën over waarheid binnen kennistheorie zijn de correspondentietheorie, coherentietheorie, en consensustheorie. 
