@@ -2,56 +2,84 @@ Wanneer is kennis waar?
 Hoe zou kennis zich moeten verhouden met andere kennis?
 Hoe kan nieuwe kennis worden afgeleid van andere?
 
-Kennistheorie gaat over deze vragen, waarvan hier een beknopte doch correcte kern uiteen wordt gezet.
-Die is volgens mij goed genoeg voor allesbehalve volledig abstracte en onwereldlijke vakgebieden.
-Ik maak hierbij keuzes uit kennistheorie die ik uitleg in “Totstandkoming van de kern”.
-Beperkingen zal ik aangeven waar ik zie dat ze nodig zijn; de kans bestaat dat ik dingen over het hoofd zie.
+Met een beknopte kern, een selectie uit kennistheorie, worden bovenstaande vragen beantwoordt, inclusief de beperkingen van die antwoorden.
+De kern is correct, maar moet niet als volledige behandeling van kennistheorie worden beschouwd. 
+De keuze voor de selectie wordt uiteengezet in “[Totstandkoming van de kern](#totstandkoming-van-de-kern)”. 
 
 ## De kern
 
-De kennis van vakgebied of de overtuigingen van iemand zijn voorbeelden van kennisverzamelingen.
+De kennis van een vakgebied of iemands overtuigingen zijn voorbeelden van _kennisverzamelingen_.
 
-Zo'n kennisverzameling moet minimaal consistent zijn, dus zonder onderlinge tegenstrijdigheden.
-Het liefst moet de verzameling ook coherent zijn, wat behalve consistentie ook nog vereist dat de kennis elkaar onderling ondersteunt.
+Zo'n kennisverzameling moet minimaal _consistent_ zijn, dus zonder onderlinge tegenstrijdigheden.
+Het liefst moet de verzameling ook _coherent_ zijn, wat behalve consistentie ook vereist dat de kennis elkaar onderling ondersteunt.
+Voor duidelijkheid wordt er in het vervolg vanuit gegaan dat coherentie vereist is.
 
-Het is in veel vakgebieden gewenst om een correspondentie te hebben tussen kennis en de werkelijkheid. 
-Wat is waar?
-Een coherente kennisverzameling over het ecosysteem van Falatoeloezoeluizen en Groenbordpunten is prima mogelijk, maar heeft voor zover ik weet geen enkele relatie met de werkelijkheid.
-
-De mate van correspondentie kan per vakgebied verschillen.
-In de wiskunde kunnen met een set axioma's stellingen worden bewezen.
+Wat is waarheid? Het is in veel vakgebieden gewenst om een _correspondentie_ te hebben tussen kennis en de werkelijkheid. 
+Een coherente kennisverzameling over het ecosysteem van Falatoeloezoeluizen en Groenbordpunten is prima mogelijk maar heeft, voor zover ik weet, geen enkele correspondentie met de werkelijkheid.
+De mate van mogelijke of bewijsbare correspondentie kan per vakgebied verschillen.
+In de wiskundige werkelijkheid kunnen stellingen op basis van axioma's worden bewezen als “waar”.
 In vakgebieden waar theorieën empirische verschijnselen modelleren, is aannemelijk maken het hoogst mogelijke.
-Logenstraffen kan wel.
-En soms men beperkingen definiëren waarbinnen de correspondentie met de werkelijkheid goed genoeg is.
 
-Dat op pagina 3 van een specifieke uitgave van een specifiek boek een stelling staat, kan triviaal worden vastgesteld.
-Het is een triviaal feit dat die stelling daar staat, maar dat zegt op zichzelf niets over de correspondentie van die stelling met de werkelijkheid.
+In vakgebieden waar een absolute correspondentie niet mogelijk is, kunnen wel vaak _beperkingen_ worden gedefinieerd waarbinnen de correspondentie met de werkelijkheid _goed genoeg_ is.
 
-Het vaststellen van de correspondentie met de werkelijkheid kan dus behoorlijk complex zijn, of het is slechts bij benadering mogelijk.
-Hetzelfde geldt voor het aanvaarden van een claim aan een kennisverzameling als kennis of “feit”.
-Wel kan een claim direct worden afgewezen als coherentie of zelfs consistentie wordt geschaad.
+Het is ook belangrijk om de reikwijdte van correspondentie in de gaten te houden. Dat op pagina 3 van een specifieke uitgave van een specifiek boek een stelling staat, kan bijvoorbeeld triviaal worden vastgesteld met toegang tot dat specifieke artefact. 
+Die vaststelling zegt echter niets over de correspondentie van die stelling met de werkelijkheid, of de kwaliteit van de onderbouwing ervan.
 
-Een claim of potentieel feit kan dus worden aanvaard of toegevoegd als kennis.
-Een andere manier om kennis toe te voegen aan een kennisverzameling is door deze af te leiden.
+Bij voldoende geachte correspondentie, kan een _claim_ of feit potentieel worden _aanvaard_ als kennis.
+Een andere manier om potentiële kennis te genereren is door deze _af te leiden_.
+De kennis is steeds _potentieel_ aanvaardbaar want bij het aanvaarden van de kennis, moet de _resulterende verzameling_ ook coherent zijn.
 
-Het afleiden van kennis wordt gedaan via correcte argumentatie.
-Bij correcte argumentatie is de conclusie de logische consequentie van aangenomen kennis, cia logisch redeneren.
-Bij incorrecte argumentatie bestaat dit verband niet, en zegt de argumentatie niets over de juistheid van de conclusie.
-Daarom levert correcte argumentatie als enige conclusies op die aanvaardbaar zijn als kennis.
+Het afleiden van kennis moet gebeuren via _correcte argumentatie_ waarbij de _conclusie_ via _logische redenatie_ de _logische consequentie_ van de _aangenomen kennis_ is.
+Bij incorrecte argumentatie bestaat dit verband niet, en zegt de argumentatie _niets_ over de juistheid van de conclusie.
+Derhalve is een incorrect afgeleide conclusie _nooit_ aanvaardbaar.
+Maar een correct afgeleide conclusie kan ook onaanvaardbaar zijn, want de resulterende kennisverzameling moet ook coherent zijn.
+Aangezien de conclusie de logische consequentie van de aangenomen kennis is, wordt de aangenomen kennis ook onderdeel van die resulterende kennisverzameling.
+Was die aangenomen kennis reeds onderdeel van de kennisverzameling, dan moet de tegenstrijdigheid opgelost worden: was de afleiding toch incorrect, of zitten er verborgen tegenstrijdigheden in de kennisverzameling?
 
-Aanvaardbaarheid door correcte argumentatie is op zich niet voldoende om de conclusie op te nemen in een kennisverzameling.
-De resulterende verzameling moet ook weer consistent en liefst coherent zijn.
-En aangezien de conclusie de logische consequentie van de aangenomen kennis is, is die ook onderdeel van die resulterende kennisverzameling.  
+## Toepassen van de kern
+
+De kern kan worden gebruikt voor het toetsen van elke stap bij het uitbreiden van een kennisverzameling.
+Andersom kan die ook gebruikt worden om stappen te logenstraffen. 
+Als een analyse incorrecte argumentatie bevat, is deze daarmee gelogenstraft: de conclusie is dan _niet onderbouwd_ via de betreffende analyse.
+Als een analyse tegenstrijdige aangenomen kennis gebruikt, of de conclusie tegenstrijdig is met kennis uit de kennisverzameling binnen het relevant gebied, kan dat ook.
+Aan dat laatste zit echter de beperking dat degene die toetst, alleen tegenstrijdigheden kan aantonen binnen de kennis waarover deze beschikt. 
+Een expert die meer weet, zou in principe kennis kunnen achterhouden die tegenstrijdigheid zou opleveren.
+Bij het aantonen van tegenstrijdigheden treedt ook de complicatie op dat kennis beperkingen kan hebben zoals randvoorwaarden.
+Randvoorwaarden worden onderdeel van de afgeleide kennis.
+Als ogenschijnlijk tegenstrijdige kennis elkaar uitsluitende randvoorwaarden bevatten, hoeft er dus niet altijd sprake te zijn van tegenstrijdigheid.  
 
 ## Drogredenen
 
-Fouten in argumentatie noemt men drogredenen. 
-Fouten in de logische redenering zelf zijn formele drogredenen.
-Denk aan het omkeren van een implicatie.
-Andere fouten in argumentatie zijn informele drogredenen.
-Denk aan het gebruik van aangenomen kennis die helemaal niet in de afleiding van de conclusie voorkomt.
-Deze “valse premisse” heeft dus geen enkele invloed op de juistheid van de conclusie.
-Een voorbeeld van dit type drogreden is het beroep op autoriteit, dat uit de retorica afkomstig is.
+Fouten in argumentatie noemt men _drogredenen_ of sofismen. 
+Fouten in de logische redenering zelf zijn _formele_ drogredenen.
+Andere fouten in argumentatie zijn _informele_ drogredenen.
+
+Drogredenen leveren _nooit_ aanvaardbare conclusies op omdat het _altijd_ incorrecte argumentatie betreft.
+Mensen die in exacte vakken getraind zijn, zouden geen moeite moeten hebben met formele drogredenen zoals het omdraaien van een implicatie. 
+Informele drogredenen komen echter in vele vormen, die voornamelijk uit de retorica afkomstig zijn. 
+Retorica heeft _overtuiging_ als doel, en niet het _afleiden van kennis_.
+
+Mensen zijn gevoelig voor overtuigend klinkende of sociaal aanvaardde drogredenen.
+Een veelgebruikte categorie drogredenen zijn _autoriteitsargumenten_. 
+
+Premisse 1: Einstein geniet een grote autoriteit binnen de natuurkunde. 
+Premisse 2: Einstein heeft de relativiteitstheorie afgeleid: een natuurkundige theorie.
+Premisse 3: Veel natuurkundigen zijn het met deze theorie eens.
+Conclusie: Relativiteitstheorie is een _goede_ of _juiste_ theorie.
+
+Deze conclusie is onjuist. Net als alle afgeleide kennis, is de theorie is afhankelijk van _en slechts afhankelijk van_ de afleiding, dus de logische redenatie en aangenomen kennis.
+De theorie _moet_ dus gekwalificeerd, bekritiseerd, of verdedigd worden op basis van _en slechts op basis van_ die afleiding.
+In de afleiding van relativiteitstheorie komt geen concept of term “Einstein” voor, laat staan de toegedichte kwalificaties, en ook niet de mening van vele natuurkundigen.
+Derhalve zeggen Einstein, diens kwalificaties, en de mening van veel natuurkundigen _niets_ over de kwaliteit of juistheid van relativiteitstheorie.  
+Het gebruiken van de autoriteit van iemand in een vakgebied om een conclusie te onderbouwen is een “beroep op autoriteit”.
+Het gebruiken van de mening van de meerderheid is een “beroep op de meerderheid” of “beroep op het volk”.
+
+Er kan ook een beroep worden gedaan op de wetenschappelijke consensus, maar dit wordt zelfs niet ondersteund met de relatief lakse “Consensus theorie van de waarheid” binnen kennistheorie.
+Het tot stand komen van consensus moet hier namelijk aan de kern voldoen: correcte argumentatie en kennis-coherentie. 
+Er mogen hierbij specifiek geen machtsverhoudingen of belangen in het spel zijn.
+
+Autoriteitsargumenten kunnen ook andersom werken. 
+Denk aan het in twijfel trekken van de autoriteit, of op de persoon spelen.
 
 ## Totstandkoming van de kern
 
@@ -357,3 +385,5 @@ Misinformatie bestrijd je niet met een verbod op meningen, gedachten, of bepaald
 Dat leidt tot een echokamer van niet betwiste ideeën. Die worden dus niet, wanneer nodig, aangescherpt, genuanceerd of verworpen. We toeteren wat we moeten toeteren en wie wat anders toetert, is de vijand. We gaan de belangrijkste problemen niet oplossen en duiken enthousiast in signaalpolitiek en ideologie. We staan pal voor moraliteit waar we onszelf niet aan houden. Weinig mensen zien de denkfouten en dubbele standaarden. Die domheid zie ik ook bij academici. Soms valt je mond open bij het niveau van gesprekken en wat die blootgeven aan de manier waarop mensen denken en de indruk die ze daar zelf over hebben.
 
 Die domheid en het conformisme zijn een gevaar voor de samenleving en de wereld. Lees Bonhoeffer er eens op na.
+
+[]
